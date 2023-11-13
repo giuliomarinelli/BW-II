@@ -1,63 +1,16 @@
-@import '../node_modules/bootstrap/scss/bootstrap';
-/*# sourceMappingURL=style.css.map */
+@import 'functions';
+@import 'variables';
 
-*{
-    box-sizing: border-box;
-   
-}
+@import 'album-main';
+@import 'artist-main';
+@import 'bottom-bar';
+@import 'homepage-main';
+@import 'left';
+@import 'right';
+@import 'upper-bar';
 
-body{
-    margin:0;
-    padding:0;
-    background-color: black;
-}
-.music-player{
-    --primary-color:#ddd;
-    --secondary-color:#999;
-    --green-color:2d5;
-    --padding: 1em;
-    background-color: #111;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    position:relative;
 
-    height:7rem;
-    padding:var(--padding);
-    color:var(--primary-color);
-}
-.song-bar{
-    position:absolute;
-    left:var(--padding);
-    flex-direction:row;
-    align-items: center;
-    justify-content: flex-start;
-    gap:1.5rem;
-    width:25%
-}
-.song-info{
-    display:flex;
-    align-items: center;
-    gap:1em;
-}
-.image-container{
-    --size:4.5rem;
-    flex-shrink:0;
-    width:var(--size);
-    height:var(--size);
-}
 
-.image-container img{
-    width: 100%;
-    height: 100%;
-    object-fit:cover;
 
-}
-.song-description p{
-    margin:0.2em;
-}
 
-.artist{
-    color:var(--secondary-color);
-    overflow: hidden;
-}
+
