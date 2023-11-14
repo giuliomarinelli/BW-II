@@ -170,6 +170,53 @@ a {
 
         }
 
+        .suggested-album{
+
+            background: rgb(0,0,0);
+            background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
+
+
+        }
+
+        .image-suggested-album-container{
+
+            height: 100px;
+            width: 100px;
+
+        }
+
+        .album-text{
+
+            font-size: 0.4rem;
+
+        }
+
+        .artists-text{
+
+            font-size: 0.3rem;
+
+        }
+
+        .rounded-btn{
+
+            font-size: 0.4rem;
+            font-weight: bold;
+            color: $white;
+            padding: 2px 17px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba($white, .2);
+
+        }
+
+        .play-btn{
+
+            border: 1px solid black;
+            background-color: #1CD760;
+            color: black;
+
+        }
+
     }
 
     .right {
