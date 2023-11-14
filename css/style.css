@@ -12040,8 +12040,9 @@ a:hover {
   width: 100%;
 }
 .homepage-container .bottom-bar .play-bar-container .progressed {
+  border-radius: 15px;
   height: 100%;
-  width: 50%;
+  width: 23%;
   background-color: #fff;
 }
 .homepage-container .bottom-bar .play-bar-container .fs-xs {
