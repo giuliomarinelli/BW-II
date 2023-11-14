@@ -1,49 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1982px-Spotify_icon.svg.png">
+    <link rel="icon" type="image/x-icon"
+        href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1982px-Spotify_icon.svg.png">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <title>Spotify - Artist Page</title>
+    <title>Spotify - Homepage</title>
 </head>
+
 <body>
-    
+
     <div class="homepage-container">
         <div class="wrapper">
             <div class="left">
 
-                <div class="menu-container"></div>
-                <div class="playlist-container"></div>
+                <div class="menu-container">
 
-            </div>
-            <div class="center">
+                    <div class="menu-item mb-2"><a href="#"><i class="bi bi-three-dots icon"></i></a></div>
+                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
 
-               <div class="upper-bar"></div>
-               <div class="homepage-content">
+                        <div class="d-flex justify-content-center align-items-center icon-width">
+                            <a href="#"><i class="bi bi-house-door-fill icon"></i>
+                        </div><span class="left-menu-text">Home</span></a>
 
-                    <div class="artist-info"></div>
-                    <div class="command-bar"></div>
-                    <div class="songs-container">
-                        <div class="popular-songs"></div>
-                        <div class="liked-songs"></div>
                     </div>
-               </div> 
+                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
+
+                        <div class="d-flex justify-content-center align-items-center icon-width">
+                            <a href="#"><i class="bi bi-search"></i>
+                        </div><span class="left-menu-text">Cerca</span></a>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-3 menu-item mb-4">
+
+                        <div class="d-flex justify-content-center align-items-center icon-width">
+                            <a href="#"><i class="bi bi-collection"></i>
+                        </div><span class="left-menu-text">La tua libreria</span></a>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
+
+                        <div class="d-flex justify-content-center align-items-center icon-width">
+                            <a href="#"><i class="bi bi-plus-square-fill"></i>
+                        </div><span class="left-menu-text">Crea playlist</span></a>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
+
+                        <div class="d-flex justify-content-center align-items-center icon-width">
+                            <a href="#"><i class="bi bi-heart-fill"></i>
+                        </div><span class="left-menu-text">Crea playlist</span></a>
+
+                    </div>
+                    <div class="d-flex align-items-center gap-3 menu-item mb-4">
+
+                        <div class="d-flex justify-content-center align-items-center icon-width">
+                            <a href="#"><i class="bi bi-bookmark-fill"></i></i>
+                        </div><span class="left-menu-text">I tuoi episodi</span></a>
+
+                    </div>
+
+
+
+
+                </div>
+                <div class="playlist-container">
+
+                    <div class="playlist-list pt-4">
+
+                        <a class="playlist-list-item d-block mb-2" href="#">Be the young</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Saggio vibes</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="center px-3 py-2">
+
+                <div class="upper-bar d-flex justify-content-between">
+
+                    <div class="arrows d-flex gap-2">
+
+                        <button class="arrow-icon d-flex justify-content-center align-items-center"><i
+                                class="bi bi-chevron-left m-fix-left"></i></button>
+                        <button class="arrow-icon d-flex justify-content-center align-items-center"><i
+                                class="bi bi-chevron-right m-fix-right"></i></button>
+
+                    </div>
+
+                    <div class="dropdown">
+                        <button class="dropdown-toggle btn-dropdown d-flex gap-1 align-items-center btn-top"
+                            type="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                            <div class="img-btn"><img src="assets/imgs/search/image-10.jpg" alt="img-02"></div>
+                            <p class="m-0 me-1 name-in-btn">Lidia Nautilus</p>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+                <div class="homepage-content">
+
+                    <div class="suggested-album"></div>
+                    <div class="last-playlists"></div>
+                    <div class="suggested-playlists"></div>
+
+                </div>
 
             </div>
 
-            <div class="right"></div>
-        </div>   
-            <div class="bottom-bar">
+            <div class="right">
 
-                <div class="song-info"></div>
-                <div class="play-bar-container"></div>
-                <div class="volume-container"></div>
+                <div class="friends-activities d-flex justify-content-between mb-5">
+
+                    <p class="m-0 fw-bold text-white friends-activities-text">Attività amici</p>
+                    <div class="d-flex gap-3">
+
+                        <div class="mb-2"><a href="#"><i class="bi bi-person-add icon"></i></a></div>
+                        <div class="mb-2"><a href="#"><i class="bi bi-x-lg icon"></i></a></div>
+
+                    </div>
+
+                </div>
+                <div class="friend-card d-flex gap-2 mb-4">
+
+                    <div class="img-friend-container">
+
+                        <img class="img-friend img-fluid" src="assets/imgs/main/image-1.jpg" alt=friend-img-1">
+
+                    </div>
+                    <div class="friend-card-text">
+
+                        <p class="friend-card-name m-0">Charlie Hookham</p>
+                        <p class="friend-card-activity-info my-1 fw-bold">Charlie Hookham <span
+                                class="text-white fw-bold">•</span> Yumi Zouma</p>
+                        <div class="d-flex gap-1 align-items-center"><i class="bi bi-disc disc-icon friend"></i>
+                            <p class="m-0 friend-card-activity-info ms-1 fw-bold">EP III</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="friend-card d-flex gap-2 mb-4">
+
+                    <div class="img-friend-container">
+
+                        <img class="img-friend img-fluid" src="assets/imgs/main/image-1.jpg" alt=friend-img-1">
+
+                    </div>
+                    <div class="friend-card-text">
+
+                        <p class="friend-card-name m-0">Charlie Hookham</p>
+                        <p class="friend-card-activity-info my-1 fw-bold">Charlie Hookham <span
+                                class="text-white fw-bold">•</span> Yumi Zouma</p>
+                        <div class="d-flex gap-1 align-items-center"><i class="bi bi-disc disc-icon friend"></i>
+                            <p class="m-0 friend-card-activity-info ms-1 fw-bold">EP III</p>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="friend-card d-flex gap-2 mb-4">
+
+                    <div class="img-friend-container">
+
+                        <img class="img-friend img-fluid" src="assets/imgs/main/image-1.jpg" alt=friend-img-1">
+
+                    </div>
+                    <div class="friend-card-text">
+
+                        <p class="friend-card-name m-0">Charlie Hookham</p>
+                        <p class="friend-card-activity-info my-1 fw-bold">Charlie Hookham <span
+                                class="text-white fw-bold">•</span> Yumi Zouma</p>
+                        <div class="d-flex gap-1 align-items-center"><i class="bi bi-disc disc-icon friend"></i>
+                            <p class="m-0 friend-card-activity-info ms-1 fw-bold">EP III</p>
+                        </div>
+
+                    </div>
+
+                </div>
 
             </div>
+        </div>
+        <div class="bottom-bar d-flex justify-content-between align-items-center">
+
+            <div class="song-info d-flex gap-2 align-items-center">
+
+                <div class="bottom-img-container">
+                    <img class="img-fluid" src="assets/imgs/main/image-12.jpg" alt="img-03">
+                </div>
+                <div>
+                    <p class="m-0 song-title">Fix you</p>
+                    <p class="m-0 song-artist">Coldplay</p>
+                </div>
+                <div class="heart-icon d-flex justify-content-center align-items-center ms-2">
+                    <i class="bi bi-heart"></i>
+                </div>
+
+            </div>
+            <div class="play-bar-container">
+                <div class="d-flex justify-content-center align-items-center gap-4">
+                    <i class="bi bi-shuffle player-bar-btn"></i>
+                    <i class="bi bi-skip-backward player-bar-btn"></i>
+                    <i class="bi bi-play-circle-fill play-btn"></i>
+                    <i class="bi bi-skip-forward player-bar-btn"></i>
+                    <i class="bi bi-repeat player-bar-btn"></i>
+                </div>
+                <div class="d-flex justify-content-center align-items-center gap-2">
+                    <p class="m-0 time-passed fs-xs">
+                        0:00
+                    </p>
+                    <div class="progression-bar">
+                        <div class="progressed">
+
+                        </div>
+                    </div>
+                    <p class="m-0 time-left fs-xs">
+                        -0:00
+                    </p>
+                </div>
+            </div>
+            <div class="volume-container d-flex gap-3">
+                <i class="bi bi-mic icon-bottom-right"></i>
+                <i class="bi bi-collection-play icon-bottom-right"></i>
+                <i class="bi bi-pc-display icon-bottom-right"></i>
+                <div class="d-flex gap-2">
+                    <i class="bi bi-volume-up icon-bottom-right"></i>
+                    <div class="d-flex justify-content-center align-items-center gap-2">
+                        <div class="volume-bar">
+                            <div class="level"></div>
+                        </div>
+                    </div>
+                </div>
+                <i class="bi bi-arrows-angle-expand icon-bottom-right me-3"></i>
+            </div>
+
+        </div>
     </div>
 
-
 </body>
+
 </html>

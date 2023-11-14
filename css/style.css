@@ -12049,3 +12049,18 @@ a:hover {
   font-size: 0.65rem;
   color: #B3B3B3;
 }
+.homepage-container .bottom-bar .volume-bar {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 15px;
+  width: 100px;
+}
+.homepage-container .bottom-bar .level {
+  border-radius: 15px;
+  height: 100%;
+  width: 23%;
+  background-color: #fff;
+}
+.homepage-container .bottom-bar .icon-bottom-right {
+  color: #B3B3B3;
+}/*# sourceMappingURL=style.css.map */

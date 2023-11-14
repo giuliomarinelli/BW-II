@@ -295,5 +295,24 @@ a {
             }
         }
 
+        .volume-bar {
+            height: 4px;
+            background-color: rgba($white, .45);
+            border-radius: 15px;
+            width: 100px;
+        }
+
+        .level {
+            border-radius: 15px;
+            height: 100%;
+            width: 23%;
+            background-color: $white;
+        }
+
+        .icon-bottom-right{
+
+            color: $left-menu-color-item;
+
+        }
     }
 }
