@@ -1,5 +1,6 @@
 @import 'functions';
 @import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
 
 /*
 @import 'album-main';
@@ -12,9 +13,24 @@
 */
 
 $bottom-bar-height: 70px;
+$menu-item-font-size: 0.8rem;
+$icon-size: 1.4rem;
+$left-menu-color-item: #B3B3B3;
 
 body {
     margin: 0;
+}
+
+a{
+
+    text-decoration: none;
+    color: $left-menu-color-item;
+    transition: color .35s;
+    
+    &:hover{
+
+        color: lighten($color: $left-menu-color-item, $amount: 15%);
+    }
 }
 
 * {
@@ -34,20 +50,188 @@ body {
     .left {
         flex-basis: 25%;
         border: 1px solid $black;
+        background-color: black;
+        padding: 20px;
+
+        .menu-item{
+
+            color: #B3B3B3;
+
+        }
+
+        .icon{
+
+            font-size: $icon-size;
+
+        }
+
+        .left-menu-text{
+
+            font-size: $menu-item-font-size;
+
+        }
+
+        .icon-width{
+
+            width: 20px;
+
+        }
+
+        .playlist-list{
+
+            height: calc(100vh - 251.22px - 20px - 24px - 70px);
+            border-top: 1px solid #383838;
+            overflow-y: auto;
+
+        }
+
     }
 
     .center {
         flex-basis: 50%;
         border: 1px solid $black;
+        background: rgb(33,33,33);
+        background: linear-gradient(180deg, rgba(33,33,33,1) 0%, rgba(18,18,18,1) 100%);
+        
+
+        .arrow-icon{
+
+            background-color: rgba(0, 0, 0, 0.276);
+            border-radius: 100%;
+            width: 20px;
+            height: 20px;
+            color: #979797;
+            border: none;
+            transition: background-color .4s;
+
+            &:hover{
+
+                background-color: lighten($color: #000000, $amount: 15%);
+            }
+
+        }
+
+        .m-fix-left{
+
+            margin-left: -3px;
+
+        }
+
+        .m-fix-right{
+
+            margin-right: -3px;
+
+        }
+
+        .btn-dropdown{
+
+            border-radius: 50px;
+            border: none;
+            background-color: #0A0A0A;
+            color: white;
+            font-size: 0.9rem;
+            height: 20px;
+
+
+        }
+
+        .img-btn{ 
+            
+            height: 98%;
+
+            img{
+
+            height: 100%;
+            border-radius: 100%;
+            margin-bottom: 7px;
+            margin-left: -4px;
+            
+
+            }
+        }
+
+        .name-in-btn{
+
+            font-size: 0.575rem;
+            font-weight: bold;
+
+        }
+
+
+
+        .btn-top{
+            
+            transition: background-color .4s;
+            
+            &:hover{
+
+            background-color: lighten($color: #000000, $amount: 15%);
+            }
+
+        }
+
     }
 
     .right {
         flex-basis: 25%;
         border: 1px solid $black;
+        background-color: black;
+        padding: 20px;
+
+        .friends-activities-text{
+
+            font-size: 0.9rem;
+
+        }
+
+        .img-friend-container{
+
+            width: 40px;
+
+        }
+
+        .img-friend{
+
+            border-radius: 100%;
+
+        }
+
+        .friend-card{
+
+            color: $left-menu-color-item;
+
+        }
+
+        .friend-card-name{
+
+            font-size: 0.8rem;
+            font-weight: bold;
+
+        }
+
+        .friend-card-activity-info{
+
+            font-size: 0.6rem;
+
+        }
+
+        .disc-icon{
+
+            font-size: 0.8rem;
+
+        }
+
     }
 
     .bottom-bar {
         height: $bottom-bar-height;
         border: 1px solid $black;
+
+        .bottom-img.container{
+
+            width: 40px;
+
+        }
+    
     }
 }
