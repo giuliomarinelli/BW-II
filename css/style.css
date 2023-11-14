@@ -1,0 +1,42 @@
+/*
+@import 'album-main';
+@import 'artist-main';
+@import 'bottom-bar';
+@import 'homepage-main';
+@import 'left';
+@import 'right';
+@import 'upper-bar';
+*/
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.homepage-container {
+  width: 100vw;
+  height: 100vh;
+}
+.homepage-container .wrapper {
+  display: flex;
+  align-items: stretch;
+  height: calc(100vh - 70px);
+}
+.homepage-container .left {
+  flex-basis: 25%;
+  border: 1px solid #000;
+}
+.homepage-container .center {
+  flex-basis: 50%;
+  border: 1px solid #000;
+}
+.homepage-container .right {
+  flex-basis: 25%;
+  border: 1px solid #000;
+}
+.homepage-container .bottom-bar {
+  height: 70px;
+  border: 1px solid #000;
+}
