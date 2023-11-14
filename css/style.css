@@ -11994,8 +11994,57 @@ a:hover {
 }
 .homepage-container .bottom-bar {
   height: 70px;
-  border: 1px solid #000;
+  background-color: #181818;
+  border-top: 1px solid rgba(179, 179, 179, 0.2);
 }
-.homepage-container .bottom-bar .bottom-img.container {
-  width: 40px;
-}/*# sourceMappingURL=style.css.map */
+.homepage-container .bottom-bar .bottom-img-container {
+  margin: 0 15px;
+  width: 47px;
+  height: 47px;
+}
+.homepage-container .bottom-bar .song-title {
+  font-size: 0.9rem;
+  color: #fff;
+  margin-bottom: 2px;
+}
+.homepage-container .bottom-bar .song-artist {
+  font-size: 0.7rem;
+  color: #B3B3B3;
+}
+.homepage-container .bottom-bar .heart-icon {
+  font-size: 0.8rem;
+  color: #B3B3B3;
+  cursor: pointer;
+}
+.homepage-container .bottom-bar .heart-icon i {
+  transition: color 0.4s;
+}
+.homepage-container .bottom-bar .heart-icon i:hover {
+  color: #fff;
+}
+.homepage-container .bottom-bar .play-bar-container {
+  flex-basis: 50%;
+}
+.homepage-container .bottom-bar .play-bar-container .player-bar-btn {
+  font-size: 0.85rem;
+  color: #B3B3B3;
+}
+.homepage-container .bottom-bar .play-bar-container .play-btn {
+  color: #fff;
+  font-size: 1.75rem;
+}
+.homepage-container .bottom-bar .play-bar-container .progression-bar {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 15px;
+  width: 100%;
+}
+.homepage-container .bottom-bar .play-bar-container .progressed {
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
+}
+.homepage-container .bottom-bar .play-bar-container .fs-xs {
+  font-size: 0.65rem;
+  color: #B3B3B3;
+}
