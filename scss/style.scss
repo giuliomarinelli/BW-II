@@ -16,6 +16,7 @@ $bottom-bar-height: 70px;
 $menu-item-font-size: 0.8rem;
 $icon-size: 1.4rem;
 $left-menu-color-item: #B3B3B3;
+$main-playlist-card-background: #2C2C2C;
 
 body {
     margin: 0;
@@ -48,7 +49,7 @@ a {
     }
 
     .left {
-        flex-basis: 25%;
+        flex-basis: 20%;
         border: 1px solid $black;
         background-color: black;
         padding: 20px;
@@ -88,7 +89,7 @@ a {
     }
 
     .center {
-        flex-basis: 50%;
+        flex-basis: 60%;
         border: 1px solid $black;
         background: rgb(33, 33, 33);
         background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 100%);
@@ -178,6 +179,35 @@ a {
 
         }
 
+        .playlist-card-container {
+            
+            border-radius:5px;
+
+            img {
+                width: 100%;
+                height: 80px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+        }
+
+        .playlist-card-bg {
+            background-color: $main-playlist-card-background;
+        }
+
+        .suggested-playlists {
+
+            gap: 15px;
+
+            .suggested-playlist-card {
+                flex-basis: calc(100% / 5 - 15px);
+                background-color: #151515;
+                height:100px;
+                
+            }
+        }
+
         .image-suggested-album-container{
 
             height: 100px;
@@ -220,7 +250,7 @@ a {
     }
 
     .right {
-        flex-basis: 25%;
+        flex-basis: 20%;
         border: 1px solid $black;
         background-color: black;
         padding: 20px;

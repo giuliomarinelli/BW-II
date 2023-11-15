@@ -11891,7 +11891,7 @@ a:hover {
   height: calc(100vh - 70px);
 }
 .homepage-container .left {
-  flex-basis: 25%;
+  flex-basis: 20%;
   border: 1px solid #000;
   background-color: black;
   padding: 20px;
@@ -11914,7 +11914,7 @@ a:hover {
   overflow-y: auto;
 }
 .homepage-container .center {
-  flex-basis: 50%;
+  flex-basis: 60%;
   border: 1px solid #000;
   background: rgb(33, 33, 33);
   background: linear-gradient(180deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 100%);
@@ -11968,6 +11968,26 @@ a:hover {
   background: rgb(0, 0, 0);
   background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
 }
+.homepage-container .center .playlist-card-container {
+  border-radius: 5px;
+}
+.homepage-container .center .playlist-card-container img {
+  width: 100%;
+  height: 80px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.homepage-container .center .playlist-card-bg {
+  background-color: #2C2C2C;
+}
+.homepage-container .center .suggested-playlists {
+  gap: 15px;
+}
+.homepage-container .center .suggested-playlists .suggested-playlist-card {
+  flex-basis: calc(20% - 15px);
+  background-color: #151515;
+  height: 100px;
+}
 .homepage-container .center .image-suggested-album-container {
   height: 100px;
   width: 100px;
@@ -11993,7 +12013,7 @@ a:hover {
   color: black;
 }
 .homepage-container .right {
-  flex-basis: 25%;
+  flex-basis: 20%;
   border: 1px solid #000;
   background-color: black;
   padding: 20px;
