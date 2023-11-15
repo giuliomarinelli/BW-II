@@ -1,4 +1,5 @@
 import defaultExport from './auth.js'
+
 const options = defaultExport;
 console.log(options)
 const getAlbum = async (id) => {

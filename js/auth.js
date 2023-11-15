@@ -18,7 +18,7 @@ const getAuth = async () => {
     writeCookie('SpotifyBearer', data.access_token)
 }
 
-
+setInterval(getAuth, 3600000);
 
 
 function writeCookie(nomecookie, testo) {
