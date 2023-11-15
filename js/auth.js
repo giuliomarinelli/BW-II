@@ -1,21 +1,28 @@
 // stored in the previous step
 import defaultExport from './secret.js'
+let url = new URLSearchParams(location.search);
 
 
 const getAuth = async () => {
     const clientId = 'a08665dce25b4dd4b88d1d5a503b023e'
-    const url = 'https://accounts.spotify.com/api/token';
-    const res = await fetch(url,
+    const url1 = 'https://accounts.spotify.com/api/token';
+    const form = new FormData;
+    form.append('code', url.get('code'));
+    form.append('redirect_uri', 'http://127.0.0.1:5500/homepage.html');
+    form.append('grant_type', 'client_credentials');
+    const res1 = await fetch(url1,
         {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded',
                 'Authorization': 'Basic ' + btoa(clientId + ':' + defaultExport)
             },
-            body: 'grant_type=client_credentials'
+            body: form
         })
-    const data = await res.json();
-    writeCookie('SpotifyBearer', data.access_token)
+
+    const data = await res1.json();
+    writeCookie('SpotifyBearer', data.access_token);
+    return data;
 }
 
 setInterval(getAuth, 3600000);
@@ -33,41 +40,74 @@ function writeCookie(nomecookie, testo) {
 
 function readCookie(cookieDaLeggere) {
     let allCookies = document.cookie;
-    console.log(allCookies);//"cookie_sessione=test; nome=Michele; mostra_popup=no"
+
 
     // Dividiamo i cookies in un array di elementi chiave/valore
     let arr = allCookies.split('; ');//["cookie_sessione=test", "nome=Michele", "mostra_popup=no"]
 
     let chiave, valore;
-    
+
 
     let res = '';
-    for(let i = 0; i < arr.length; i++) {
+    for (let i = 0; i < arr.length; i++) {
 
-       chiave = arr[i].split('=')[0];//"mostra_popup"
-       valore = arr[i].split('=')[1];//"no"
-        if(cookieDaLeggere == chiave){
-           res = valore;
-         }
+        chiave = arr[i].split('=')[0];//"mostra_popup"
+        valore = arr[i].split('=')[1];//"no"
+        if (cookieDaLeggere == chiave) {
+            res = valore;
+        }
 
     }
- return res;
- }
-
-const authCookieContent = readCookie('SpotifyBearer');
-
-if (!authCookieContent) 
-    getAuth();
-
-console.log(authCookieContent)
-const opt = {
-    headers: {
-        'Authorization': `Bearer ${authCookieContent}`
-    }
+    return res;
 }
 
 
-export default opt;
+
+getAuth().then(res => getProfile())
+
+
+
+
+
+const getEntitlements = async () => {
+    const authCookieContent = readCookie('SpotifyBearer');
+    console.log(authCookieContent)
+    const options = {
+        method: 'POST',
+        headers: {
+            'Authorization': `Bearer ${authCookieContent}`,
+
+        }
+    }
+    console.log(authCookieContent)
+    const res = await fetch(`https://open-access.spotify.com/api/v1/get-entitlements`, options)
+    console.log(await res.json())
+
+}
+const getProfile = async () => {
+    const authCookieContent = readCookie('SpotifyBearer');
+    console.log(authCookieContent)
+    const options = {
+        headers: {
+            'Authorization': `Bearer ${authCookieContent}`
+        }
+    }
+    console.log(authCookieContent)
+    const res = await fetch(`https://api.spotify.com/v1/me`, options)
+    console.log(await res.json())
+
+}
+
+
+
+const getAlbum = async (id) => {
+    await getAuth()
+    const res = await fetch(`https://api.spotify.com/v1/albums/${id}`, options)
+
+}
+
+//getAlbum('4aawyAB9vmqN3uQ7FjRGTy')
+
 
 /*
 const body = await fetch(url, payload);
