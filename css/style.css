@@ -11914,7 +11914,7 @@ a:hover {
   overflow-y: auto;
 }
 .homepage-container .center {
-  flex-basis: 60%;
+  flex-basis: 65%;
   border: 1px solid #000;
   background: rgb(33, 33, 33);
   background: linear-gradient(180deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 100%);
@@ -11967,9 +11967,11 @@ a:hover {
 .homepage-container .center .suggested-album {
   background: rgb(0, 0, 0);
   background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
+  height: 200px;
 }
 .homepage-container .center .playlist-card-container {
   border-radius: 5px;
+  flex-basis: calc(33.3333333333% - 1rem);
 }
 .homepage-container .center .playlist-card-container img {
   width: 100%;
@@ -11980,13 +11982,16 @@ a:hover {
 .homepage-container .center .playlist-card-bg {
   background-color: #2C2C2C;
 }
-.homepage-container .center .suggested-playlists {
-  gap: 15px;
+.homepage-container .center .suggested-playlists .show-all {
+  color: #B3B3B3;
+  font-size: 0.8rem;
 }
-.homepage-container .center .suggested-playlists .suggested-playlist-card {
-  flex-basis: calc(20% - 15px);
-  background-color: #151515;
-  height: 100px;
+.homepage-container .center .suggested-playlists .suggested-card {
+  width: 170px;
+  flex-basis: calc(20% - 1rem);
+}
+.homepage-container .center .suggested-playlists .custom-img-card {
+  border-radius: 20px;
 }
 .homepage-container .center .image-suggested-album-container {
   height: 100px;
@@ -12013,7 +12018,7 @@ a:hover {
   color: black;
 }
 .homepage-container .right {
-  flex-basis: 20%;
+  flex-basis: 15%;
   border: 1px solid #000;
   background-color: black;
   padding: 20px;

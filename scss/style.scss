@@ -89,7 +89,7 @@ a {
     }
 
     .center {
-        flex-basis: 60%;
+        flex-basis: 65%;
         border: 1px solid $black;
         background: rgb(33, 33, 33);
         background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 100%);
@@ -175,7 +175,7 @@ a {
 
             background: rgb(0,0,0);
             background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
-
+            height:200px;
 
         }
 
@@ -190,6 +190,7 @@ a {
                 border-bottom-left-radius: 5px;
             }
 
+            flex-basis: calc(100% / 3 - 1rem)
         }
 
         .playlist-card-bg {
@@ -197,14 +198,19 @@ a {
         }
 
         .suggested-playlists {
+            
+            .show-all {
+                color: $left-menu-color-item;
+                font-size: 0.8rem;
+            }
+            
+            .suggested-card {
+                width: 170px;
+                flex-basis:calc(100% / 5 - 1rem);
+            }
 
-            gap: 15px;
-
-            .suggested-playlist-card {
-                flex-basis: calc(100% / 5 - 15px);
-                background-color: #151515;
-                height:100px;
-                
+            .custom-img-card {
+                border-radius: 20px;
             }
         }
 
@@ -250,7 +256,7 @@ a {
     }
 
     .right {
-        flex-basis: 20%;
+        flex-basis: 15%;
         border: 1px solid $black;
         background-color: black;
         padding: 20px;
