@@ -42,6 +42,13 @@ a {
     width: 100vw;
     height: 100vh;
 
+    .homepage-content {
+
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+
+    }
+
     .wrapper {
         display: flex;
         align-items: stretch;
@@ -175,7 +182,6 @@ a {
 
             background: rgb(0,0,0);
             background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
-            height:200px;
 
         }
 
@@ -216,29 +222,35 @@ a {
 
         .image-suggested-album-container{
 
-            height: 100px;
-            width: 100px;
+            height: 210px;
+            width: 200px;
+
+        }
+
+        .album-title{
+
+            font-size: 3.2rem;
 
         }
 
         .album-text{
 
-            font-size: 0.4rem;
+            font-size: 0.8rem;
 
         }
 
         .artists-text{
 
-            font-size: 0.3rem;
+            font-size: 0.7rem;
 
         }
 
         .rounded-btn{
 
-            font-size: 0.4rem;
+            font-size: 0.7rem;
             font-weight: bold;
             color: $white;
-            padding: 2px 17px;
+            padding: 10px 25px;
             border-radius: 30px;
             background-color: transparent;
             border: 1px solid rgba($white, .2);

@@ -11890,6 +11890,10 @@ a:hover {
   height: 100vh;
   /* ALBUM PAGE */
 }
+.homepage-container .homepage-content {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
 .homepage-container .wrapper {
   display: flex;
   align-items: stretch;
@@ -11972,7 +11976,6 @@ a:hover {
 .homepage-container .center .suggested-album {
   background: rgb(0, 0, 0);
   background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
-  height: 200px;
 }
 .homepage-container .center .playlist-card-container {
   border-radius: 5px;
@@ -11999,20 +12002,23 @@ a:hover {
   border-radius: 20px;
 }
 .homepage-container .center .image-suggested-album-container {
-  height: 100px;
-  width: 100px;
+  height: 210px;
+  width: 200px;
+}
+.homepage-container .center .album-title {
+  font-size: 3.2rem;
 }
 .homepage-container .center .album-text {
-  font-size: 0.4rem;
+  font-size: 0.8rem;
 }
 .homepage-container .center .artists-text {
-  font-size: 0.3rem;
+  font-size: 0.7rem;
 }
 .homepage-container .center .rounded-btn {
-  font-size: 0.4rem;
+  font-size: 0.7rem;
   font-weight: bold;
   color: #fff;
-  padding: 2px 17px;
+  padding: 10px 25px;
   border-radius: 30px;
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.2);
