@@ -1,4 +1,9 @@
 @charset "UTF-8";
+.album {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(360deg, #121212 43%, rgb(255, 211, 64) 100%);
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11856,7 +11861,6 @@ textarea.form-control-lg {
   }
 }
 /*
-@import 'album-main';
 @import 'artist-main';
 @import 'bottom-bar';
 @import 'homepage-main';
@@ -11884,6 +11888,7 @@ a:hover {
 .homepage-container {
   width: 100vw;
   height: 100vh;
+  /* ALBUM PAGE */
 }
 .homepage-container .wrapper {
   display: flex;
@@ -12116,4 +12121,8 @@ a:hover {
 }
 .homepage-container .bottom-bar .icon-bottom-right {
   color: #B3B3B3;
+}
+.homepage-container .album {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(360deg, #121212 43%, rgb(255, 211, 64) 100%);
 }/*# sourceMappingURL=style.css.map */

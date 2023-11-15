@@ -1,9 +1,9 @@
 @import 'functions';
 @import 'variables';
+@import 'album-main';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 /*
-@import 'album-main';
 @import 'artist-main';
 @import 'bottom-bar';
 @import 'homepage-main';
@@ -398,4 +398,12 @@ a {
 
         }
     }
+
+    /* ALBUM PAGE */
+    
+    .album {
+        background: rgb(0,0,0);
+        background: linear-gradient(360deg, #121212 43%, rgba(255,211,64,1) 100%);
+    }
 }
+
