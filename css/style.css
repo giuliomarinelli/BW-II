@@ -11855,11 +11855,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.suggested-album-green {
+  height: 400px;
+  background-color: #B1993F;
+}
+
+.image-suggested-album-green-container {
+  width: 200px;
+}
+
+.upper-bar-green {
+  background-color: #B1993F;
+}
+
 /*
-@import 'album-main';
-@import 'artist-main';
-@import 'bottom-bar';
 @import 'homepage-main';
+@import 'bottom-bar';
 @import 'left';
 @import 'right';
 @import 'upper-bar';
@@ -12122,4 +12133,30 @@ a:hover {
 }
 .homepage-container .bottom-bar .icon-bottom-right {
   color: #B3B3B3;
+}
+
+.homepage-artist-content {
+  height: 400px;
+  background-image: url(../assets/imgs/main/yellowcard.jpeg);
+  background-size: cover;
+  margin: -30px -15px;
+}
+.homepage-artist-content .artist-name {
+  font-size: 4rem;
+}
+.homepage-artist-content .spectators-text {
+  font-size: 0.8rem;
+}
+.homepage-artist-content .verified-artist-text {
+  font-size: 0.6rem;
+}
+.homepage-artist-content .verified-icon {
+  font-size: 1rem;
+}
+
+.play-icon {
+  background-color: transparent;
+  border: none;
+  color: #1CD760;
+  margin-top: 35px;
 }/*# sourceMappingURL=style.css.map */

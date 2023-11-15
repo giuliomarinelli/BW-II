@@ -2,11 +2,11 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-/*
 @import 'album-main';
-@import 'artist-main';
-@import 'bottom-bar';
+
+/*
 @import 'homepage-main';
+@import 'bottom-bar';
 @import 'left';
 @import 'right';
 @import 'upper-bar';
@@ -411,3 +411,4 @@ a {
         }
     }
 }
+@import 'artist-main';
