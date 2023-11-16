@@ -1,8 +1,21 @@
 $play-button-color: #1ED760;
+$grayed-text: #B3B3B3;
+$shadow:rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+.center-container {
+    height:calc(100vh - 70px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
 
 .album {
+    border: none;
     background: rgb(0,0,0);
     background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+
+    .img-shadow {
+        box-shadow: $shadow;
+    }
 
     .album-title {
         font-size: 5rem;
@@ -18,32 +31,85 @@ $play-button-color: #1ED760;
         text-decoration: underline;
         text-underline-offset: 1px;
     }
+    .album-bottom-container {
+        margin: -17px;
+        background-color: rgba(#1e1e1e, 0.5);
+        height: 100%;
 
-    .play-container,
-    .heart-container,
-    .download-container {
-        background-color: transparent;
-        border: none;
-    }
+        .play-container,
+        .heart-container,
+        .download-container {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
+        }
+    
+        .play-container {
+            color: $play-button-color;
+            font-size: 2.8rem;
+            transition: 0.3s;
 
-    .play-container {
-        color: $play-button-color;
-    }
+            &:hover {
+                scale: 1.1;
+            }
+        }
+    
+        .heart-container,
+        .download-container {
+            color: $grayed-text;
+            transition: 0.4s;
 
-    .heart-container {
-        color: $left-menu-color-item;
+            &:hover {
+                color: white;
+            }
+        }
 
-        &:hover {
-            color: white;
+        table {
+            width: 98%;
+            thead {
+                border-bottom: 1px solid rgba($grayed-text, 0.15);
+    
+                tr {
+                    padding-bottom: 10px;
+                }
+
+                th {
+                    color: $grayed-text;
+                }
+            }
+
+            tbody {
+                p {
+                    margin:0;
+                }
+
+                tr {
+                    &:hover {
+                        background-color: #282828;
+                        border-radius: 5px;
+                    }
+                }
+            }
+
+            .song-n {
+                flex-basis: 5%;
+            }
+            
+            .song-title {
+                flex-basis: 55%;
+            }
+
+            .song-plays {
+                flex-basis: 35%;
+            }
+
+            .song-time {
+                flex-basis: 5%;
+            }
+
+            .song-td-artists {
+                color: $grayed-text;
+            }
         }
     }
-
-    .download-container {
-        color: $left-menu-color-item;
-
-        &:hover {
-            color: white;
-        }
-    }
-
 }

@@ -1,4 +1,144 @@
 @charset "UTF-8";
+.homepage-artist-content {
+  height: 400px;
+  background-image: url(../assets/imgs/main/yellowcard.jpeg);
+  background-size: cover;
+  margin: -30px -15px;
+}
+.homepage-artist-content .artist-name {
+  font-size: 4rem;
+}
+.homepage-artist-content .spectators-text {
+  font-size: 0.8rem;
+}
+.homepage-artist-content .verified-artist-text {
+  font-size: 0.6rem;
+}
+.homepage-artist-content .verified-icon {
+  font-size: 1rem;
+}
+
+.play-icon {
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  color: #1CD760;
+  margin-top: 35px;
+  transition: 0.2s linear;
+}
+.play-icon:hover {
+  color: white;
+}
+
+.following-btn {
+  font-size: 0.8rem;
+  height: 35px;
+  width: 110px;
+  margin-top: 55px;
+  margin-left: 20px;
+  transition: 0.2s linear;
+}
+
+.three-dots {
+  margin-top: 55px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.img-popular-song {
+  height: 40px;
+}
+
+.center-container {
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.album {
+  border: none;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+}
+.album .img-shadow {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+.album .album-title {
+  font-size: 5rem;
+}
+.album .artist-image {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+.album .artist-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+.album .album-bottom-container {
+  margin: -17px;
+  background-color: rgba(30, 30, 30, 0.5);
+  height: 100%;
+}
+.album .album-bottom-container .play-container,
+.album .album-bottom-container .heart-container,
+.album .album-bottom-container .download-container {
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+.album .album-bottom-container .play-container {
+  color: #1ED760;
+  font-size: 2.8rem;
+  transition: 0.3s;
+}
+.album .album-bottom-container .play-container:hover {
+  scale: 1.1;
+}
+.album .album-bottom-container .heart-container,
+.album .album-bottom-container .download-container {
+  color: #B3B3B3;
+  transition: 0.4s;
+}
+.album .album-bottom-container .heart-container:hover,
+.album .album-bottom-container .download-container:hover {
+  color: white;
+}
+.album .album-bottom-container table {
+  width: 98%;
+}
+.album .album-bottom-container table thead {
+  border-bottom: 1px solid rgba(179, 179, 179, 0.15);
+}
+.album .album-bottom-container table thead tr {
+  padding-bottom: 10px;
+}
+.album .album-bottom-container table thead th {
+  color: #B3B3B3;
+}
+.album .album-bottom-container table tbody p {
+  margin: 0;
+}
+.album .album-bottom-container table tbody tr:hover {
+  background-color: #282828;
+  border-radius: 5px;
+}
+.album .album-bottom-container table .song-n {
+  flex-basis: 5%;
+}
+.album .album-bottom-container table .song-title {
+  flex-basis: 55%;
+}
+.album .album-bottom-container table .song-plays {
+  flex-basis: 35%;
+}
+.album .album-bottom-container table .song-time {
+  flex-basis: 5%;
+}
+.album .album-bottom-container table .song-td-artists {
+  color: #B3B3B3;
+}
+
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11855,21 +11995,7 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
-.suggested-album-green {
-  height: 400px;
-  background-color: #B1993F;
-}
-
-.image-suggested-album-green-container {
-  width: 200px;
-}
-
-.upper-bar-green {
-  background-color: #B1993F;
-}
-
 /*
-@import 'artist-main';
 @import 'bottom-bar';
 @import 'homepage-main';
 @import 'bottom-bar';
@@ -11877,6 +12003,23 @@ textarea.form-control-lg {
 @import 'right';
 @import 'upper-bar';
 */
+/* SCROLLBAR STYLE */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.568627451);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   margin: 0;
 }
@@ -12069,6 +12212,7 @@ a:hover {
   height: 70px;
   background-color: #181818;
   border-top: 1px solid rgba(179, 179, 179, 0.2);
+  z-index: 1;
 }
 .homepage-container .bottom-bar .bottom-img-container {
   margin: 0 15px;
@@ -12137,9 +12281,18 @@ a:hover {
 .homepage-container .bottom-bar .icon-bottom-right {
   color: #B3B3B3;
 }
+.homepage-container .center-container {
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .homepage-container .album {
+  border: none;
   background: rgb(0, 0, 0);
   background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+}
+.homepage-container .album .img-shadow {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .homepage-container .album .album-title {
   font-size: 5rem;
@@ -12153,27 +12306,70 @@ a:hover {
   text-decoration: underline;
   text-underline-offset: 1px;
 }
-.homepage-container .album .play-container,
-.homepage-container .album .heart-container,
-.homepage-container .album .download-container {
+.homepage-container .album .album-bottom-container {
+  margin: -17px;
+  background-color: rgba(30, 30, 30, 0.5);
+  height: 100%;
+}
+.homepage-container .album .album-bottom-container .play-container,
+.homepage-container .album .album-bottom-container .heart-container,
+.homepage-container .album .album-bottom-container .download-container {
   background-color: transparent;
   border: none;
+  font-size: 1.5rem;
 }
-.homepage-container .album .play-container {
+.homepage-container .album .album-bottom-container .play-container {
   color: #1ED760;
+  font-size: 2.8rem;
+  transition: 0.3s;
 }
-.homepage-container .album .heart-container {
+.homepage-container .album .album-bottom-container .play-container:hover {
+  scale: 1.1;
+}
+.homepage-container .album .album-bottom-container .heart-container,
+.homepage-container .album .album-bottom-container .download-container {
   color: #B3B3B3;
+  transition: 0.4s;
 }
-.homepage-container .album .heart-container:hover {
+.homepage-container .album .album-bottom-container .heart-container:hover,
+.homepage-container .album .album-bottom-container .download-container:hover {
   color: white;
 }
-.homepage-container .album .download-container {
+.homepage-container .album .album-bottom-container table {
+  width: 98%;
+}
+.homepage-container .album .album-bottom-container table thead {
+  border-bottom: 1px solid rgba(179, 179, 179, 0.15);
+}
+.homepage-container .album .album-bottom-container table thead tr {
+  padding-bottom: 10px;
+}
+.homepage-container .album .album-bottom-container table thead th {
   color: #B3B3B3;
 }
-.homepage-container .album .download-container:hover {
-  color: white;
+.homepage-container .album .album-bottom-container table tbody p {
+  margin: 0;
 }
+.homepage-container .album .album-bottom-container table tbody tr:hover {
+  background-color: #282828;
+  border-radius: 5px;
+}
+.homepage-container .album .album-bottom-container table .song-n {
+  flex-basis: 5%;
+}
+.homepage-container .album .album-bottom-container table .song-title {
+  flex-basis: 55%;
+}
+.homepage-container .album .album-bottom-container table .song-plays {
+  flex-basis: 35%;
+}
+.homepage-container .album .album-bottom-container table .song-time {
+  flex-basis: 5%;
+}
+.homepage-container .album .album-bottom-container table .song-td-artists {
+  color: #B3B3B3;
+}
+
 .homepage-artist-content {
   height: 400px;
   background-image: url(../assets/imgs/main/yellowcard.jpeg);
@@ -12222,5 +12418,4 @@ a:hover {
 
 .img-popular-song {
   height: 40px;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

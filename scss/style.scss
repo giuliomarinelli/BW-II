@@ -19,6 +19,23 @@ $icon-size: 1.4rem;
 $left-menu-color-item: #B3B3B3;
 $main-playlist-card-background: #2C2C2C;
 
+/* SCROLLBAR STYLE */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+   
+::-webkit-scrollbar-thumb {
+    background: #88888891; 
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
 body {
     margin: 0;
 }
@@ -323,6 +340,7 @@ a {
         height: $bottom-bar-height;
         background-color: #181818;
         border-top: 1px solid rgba($left-menu-color-item, .2);
+        z-index: 1;
 
         .bottom-img-container {
 
