@@ -11869,6 +11869,8 @@ textarea.form-control-lg {
 }
 
 /*
+@import 'artist-main';
+@import 'bottom-bar';
 @import 'homepage-main';
 @import 'bottom-bar';
 @import 'left';
@@ -11895,6 +11897,7 @@ a:hover {
 .homepage-container {
   width: 100vw;
   height: 100vh;
+  /* ALBUM PAGE */
 }
 .homepage-container .homepage-content {
   height: calc(100vh - 100px);
@@ -12134,7 +12137,43 @@ a:hover {
 .homepage-container .bottom-bar .icon-bottom-right {
   color: #B3B3B3;
 }
-
+.homepage-container .album {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+}
+.homepage-container .album .album-title {
+  font-size: 5rem;
+}
+.homepage-container .album .artist-image {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+.homepage-container .album .artist-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+.homepage-container .album .play-container,
+.homepage-container .album .heart-container,
+.homepage-container .album .download-container {
+  background-color: transparent;
+  border: none;
+}
+.homepage-container .album .play-container {
+  color: #1ED760;
+}
+.homepage-container .album .heart-container {
+  color: #B3B3B3;
+}
+.homepage-container .album .heart-container:hover {
+  color: white;
+}
+.homepage-container .album .download-container {
+  color: #B3B3B3;
+}
+.homepage-container .album .download-container:hover {
+  color: white;
+}
 .homepage-artist-content {
   height: 400px;
   background-image: url(../assets/imgs/main/yellowcard.jpeg);
@@ -12183,4 +12222,5 @@ a:hover {
 
 .img-popular-song {
   height: 40px;
-}/*# sourceMappingURL=style.css.map */
+}
+/*# sourceMappingURL=style.css.map */
