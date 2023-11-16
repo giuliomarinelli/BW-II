@@ -1,4 +1,5 @@
 // Funzione di utilità per la creazione di stringhe di query URL
+import defaultExport from './secret.js'
 function queryString(params) {
     return Object.keys(params)
         .map(key => `${encodeURI(key)}=${encodeURI(params[key])}`)
@@ -8,7 +9,7 @@ function queryString(params) {
 // URL di redirect e credenziali dell'app Spotify
 var redirect_uri = 'http://127.0.0.1:5500/homepage.html';
 var client_id = 'a08665dce25b4dd4b88d1d5a503b023e';
-var client_secret = 'f57fe89e798f45cdb7551be784ac4600';
+var client_secret = defaultExport;
 
 // Gestione del callback nel browser
 function handleCallback() {
