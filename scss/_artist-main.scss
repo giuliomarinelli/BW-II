@@ -1,0 +1,157 @@
+.homepage-artist-content {
+
+    height: 400px;
+    background-image: url(../assets/imgs/main/yellowcard.jpeg);
+    background-size: cover;
+    margin: -30px -15px;
+
+    .artist-name{
+
+        font-size: 4rem;
+
+    }
+
+    .spectators-text{
+
+        font-size: 0.8rem;
+
+    }
+
+    .verified-artist-text{
+
+        font-size: 0.6rem;
+
+    }
+
+    .verified-icon{
+
+        font-size: 1rem;
+
+    }
+
+}
+.play-icon{
+
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    color: #1CD760;
+    margin-top: 35px;
+    transition: .2s linear;
+
+    &:hover{
+
+        color: white;
+    }
+}
+
+.following-btn{
+
+    font-size: 0.8rem;
+    height: 35px;
+    width: 110px;
+    margin-top: 55px;
+    margin-left: 20px;
+    transition: .2s linear;
+}
+
+.three-dots{
+
+    margin-top: 55px;
+    margin-left: 20px;
+    font-size: 1.5rem;
+
+}
+
+.img-popular-song{
+
+    height: 40px;
+
+}
+
+.song-title{
+
+    width: 300px;
+
+}
+
+.song-streams{
+
+    width: 250px;
+    font-size: 0.9rem;
+
+}
+
+.song-duration{
+
+    font-size: 0.9rem;
+
+}
+
+.see-more{
+
+    color: #B8B8B8;
+
+    &:hover{
+
+        color: white;
+
+    }
+
+}
+
+
+
+.img-liked-song{
+
+    position: relative;
+
+    .songs-you-like-img{
+
+        height: 60px;
+        border-radius: 100%;
+        position: absolute;
+    
+    }
+
+
+    .heart-icon{
+
+        position: relative;
+        left: 35px;
+        top: 40px;
+        font-size: 0.8rem;
+        color: white;
+        background-color: green;
+        border-radius: 100%;
+        padding: 5px 5px 3px 5px;
+
+    }
+
+}
+
+.like-number{
+
+    font-size: 0.8rem;
+    
+
+}
+
+.artist-liked{
+
+    font-size: 0.7rem;
+
+}
+
+.text-liked-songs{
+
+    padding-left: 50px;
+    padding-top: 10px;
+    
+}
+    
+.center-container{
+
+    height: calc(100vh - 70px);
+    overflow-y: auto;
+}
