@@ -2,11 +2,11 @@
 @import 'variables';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
-/*
 @import 'album-main';
-@import 'artist-main';
-@import 'bottom-bar';
+
+/*
 @import 'homepage-main';
+@import 'bottom-bar';
 @import 'left';
 @import 'right';
 @import 'upper-bar';
@@ -16,6 +16,7 @@ $bottom-bar-height: 70px;
 $menu-item-font-size: 0.8rem;
 $icon-size: 1.4rem;
 $left-menu-color-item: #B3B3B3;
+$main-playlist-card-background: #2C2C2C;
 
 body {
     margin: 0;
@@ -41,6 +42,13 @@ a {
     width: 100vw;
     height: 100vh;
 
+    .homepage-content {
+
+        height: calc(100vh - 100px);
+        overflow-y: auto;
+
+    }
+
     .wrapper {
         display: flex;
         align-items: stretch;
@@ -48,7 +56,7 @@ a {
     }
 
     .left {
-        flex-basis: 25%;
+        flex-basis: 20%;
         border: 1px solid $black;
         background-color: black;
         padding: 20px;
@@ -88,7 +96,7 @@ a {
     }
 
     .center {
-        flex-basis: 50%;
+        flex-basis: 65%;
         border: 1px solid $black;
         background: rgb(33, 33, 33);
         background: linear-gradient(180deg, rgba(33, 33, 33, 1) 0%, rgba(18, 18, 18, 1) 100%);
@@ -170,10 +178,97 @@ a {
 
         }
 
+        .suggested-album{
+
+            background: rgb(0,0,0);
+            background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
+
+        }
+
+        .playlist-card-container {
+            
+            border-radius:5px;
+
+            img {
+                width: 100%;
+                height: 80px;
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            flex-basis: calc(100% / 3 - 1rem)
+        }
+
+        .playlist-card-bg {
+            background-color: $main-playlist-card-background;
+        }
+
+        .suggested-playlists {
+            
+            .show-all {
+                color: $left-menu-color-item;
+                font-size: 0.8rem;
+            }
+            
+            .suggested-card {
+                width: 170px;
+                flex-basis:calc(100% / 5 - 1rem);
+            }
+
+            .custom-img-card {
+                border-radius: 20px;
+            }
+        }
+
+        .image-suggested-album-container{
+
+            height: 210px;
+            width: 200px;
+
+        }
+
+        .album-title{
+
+            font-size: 3.2rem;
+
+        }
+
+        .album-text{
+
+            font-size: 0.8rem;
+
+        }
+
+        .artists-text{
+
+            font-size: 0.7rem;
+
+        }
+
+        .rounded-btn{
+
+            font-size: 0.7rem;
+            font-weight: bold;
+            color: $white;
+            padding: 10px 25px;
+            border-radius: 30px;
+            background-color: transparent;
+            border: 1px solid rgba($white, .2);
+
+        }
+
+        .play-btn{
+
+            border: 1px solid black;
+            background-color: #1CD760;
+            color: black;
+
+        }
+
     }
 
     .right {
-        flex-basis: 25%;
+        flex-basis: 15%;
         border: 1px solid $black;
         background-color: black;
         padding: 20px;
@@ -295,5 +390,25 @@ a {
             }
         }
 
+        .volume-bar {
+            height: 4px;
+            background-color: rgba($white, .45);
+            border-radius: 15px;
+            width: 100px;
+        }
+
+        .level {
+            border-radius: 15px;
+            height: 100%;
+            width: 23%;
+            background-color: $white;
+        }
+
+        .icon-bottom-right{
+
+            color: $left-menu-color-item;
+
+        }
     }
 }
+@import 'artist-main';

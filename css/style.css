@@ -11855,11 +11855,22 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.suggested-album-green {
+  height: 400px;
+  background-color: #B1993F;
+}
+
+.image-suggested-album-green-container {
+  width: 200px;
+}
+
+.upper-bar-green {
+  background-color: #B1993F;
+}
+
 /*
-@import 'album-main';
-@import 'artist-main';
-@import 'bottom-bar';
 @import 'homepage-main';
+@import 'bottom-bar';
 @import 'left';
 @import 'right';
 @import 'upper-bar';
@@ -11885,13 +11896,17 @@ a:hover {
   width: 100vw;
   height: 100vh;
 }
+.homepage-container .homepage-content {
+  height: calc(100vh - 100px);
+  overflow-y: auto;
+}
 .homepage-container .wrapper {
   display: flex;
   align-items: stretch;
   height: calc(100vh - 70px);
 }
 .homepage-container .left {
-  flex-basis: 25%;
+  flex-basis: 20%;
   border: 1px solid #000;
   background-color: black;
   padding: 20px;
@@ -11914,7 +11929,7 @@ a:hover {
   overflow-y: auto;
 }
 .homepage-container .center {
-  flex-basis: 50%;
+  flex-basis: 65%;
   border: 1px solid #000;
   background: rgb(33, 33, 33);
   background: linear-gradient(180deg, rgb(33, 33, 33) 0%, rgb(18, 18, 18) 100%);
@@ -11964,8 +11979,63 @@ a:hover {
 .homepage-container .center .btn-top:hover {
   background-color: #262626;
 }
+.homepage-container .center .suggested-album {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(20deg, rgba(0, 0, 0, 0.916) 15%, rgba(21, 21, 21, 0.076) 60%);
+}
+.homepage-container .center .playlist-card-container {
+  border-radius: 5px;
+  flex-basis: calc(33.3333333333% - 1rem);
+}
+.homepage-container .center .playlist-card-container img {
+  width: 100%;
+  height: 80px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.homepage-container .center .playlist-card-bg {
+  background-color: #2C2C2C;
+}
+.homepage-container .center .suggested-playlists .show-all {
+  color: #B3B3B3;
+  font-size: 0.8rem;
+}
+.homepage-container .center .suggested-playlists .suggested-card {
+  width: 170px;
+  flex-basis: calc(20% - 1rem);
+}
+.homepage-container .center .suggested-playlists .custom-img-card {
+  border-radius: 20px;
+}
+.homepage-container .center .image-suggested-album-container {
+  height: 210px;
+  width: 200px;
+}
+.homepage-container .center .album-title {
+  font-size: 3.2rem;
+}
+.homepage-container .center .album-text {
+  font-size: 0.8rem;
+}
+.homepage-container .center .artists-text {
+  font-size: 0.7rem;
+}
+.homepage-container .center .rounded-btn {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 25px;
+  border-radius: 30px;
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.homepage-container .center .play-btn {
+  border: 1px solid black;
+  background-color: #1CD760;
+  color: black;
+}
 .homepage-container .right {
-  flex-basis: 25%;
+  flex-basis: 15%;
   border: 1px solid #000;
   background-color: black;
   padding: 20px;
@@ -12049,3 +12119,68 @@ a:hover {
   font-size: 0.65rem;
   color: #B3B3B3;
 }
+.homepage-container .bottom-bar .volume-bar {
+  height: 4px;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 15px;
+  width: 100px;
+}
+.homepage-container .bottom-bar .level {
+  border-radius: 15px;
+  height: 100%;
+  width: 23%;
+  background-color: #fff;
+}
+.homepage-container .bottom-bar .icon-bottom-right {
+  color: #B3B3B3;
+}
+
+.homepage-artist-content {
+  height: 400px;
+  background-image: url(../assets/imgs/main/yellowcard.jpeg);
+  background-size: cover;
+  margin: -30px -15px;
+}
+.homepage-artist-content .artist-name {
+  font-size: 4rem;
+}
+.homepage-artist-content .spectators-text {
+  font-size: 0.8rem;
+}
+.homepage-artist-content .verified-artist-text {
+  font-size: 0.6rem;
+}
+.homepage-artist-content .verified-icon {
+  font-size: 1rem;
+}
+
+.play-icon {
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  color: #1CD760;
+  margin-top: 35px;
+  transition: 0.2s linear;
+}
+.play-icon:hover {
+  color: white;
+}
+
+.following-btn {
+  font-size: 0.8rem;
+  height: 35px;
+  width: 110px;
+  margin-top: 55px;
+  margin-left: 20px;
+  transition: 0.2s linear;
+}
+
+.three-dots {
+  margin-top: 55px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.img-popular-song {
+  height: 40px;
+}/*# sourceMappingURL=style.css.map */
