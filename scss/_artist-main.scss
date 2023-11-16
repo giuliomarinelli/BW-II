@@ -1,0 +1,40 @@
+.homepage-artist-content {
+
+    height: 400px;
+    background-image: url(../assets/imgs/main/yellowcard.jpeg);
+    background-size: cover;
+    margin: -30px -15px;
+
+    .artist-name{
+
+        font-size: 4rem;
+
+    }
+
+    .spectators-text{
+
+        font-size: 0.8rem;
+
+    }
+
+    .verified-artist-text{
+
+        font-size: 0.6rem;
+
+    }
+
+    .verified-icon{
+
+        font-size: 1rem;
+
+    }
+
+}
+.play-icon{
+
+    background-color: transparent;
+    border: none;
+    color: #1CD760;
+    margin-top: 35px;
+
+}
