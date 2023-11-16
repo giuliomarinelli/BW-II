@@ -1,6 +1,8 @@
 $play-button-color: #1ED760;
+$grayed-text: #B3B3B3;
 
 .album {
+    border: none;
     background: rgb(0,0,0);
     background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
 
@@ -18,32 +20,40 @@ $play-button-color: #1ED760;
         text-decoration: underline;
         text-underline-offset: 1px;
     }
+    .album-bottom-container {
+        margin: -17px;
+        background-color: rgba(#1e1e1e, 0.5);
+        height: 1200px;
 
-    .play-container,
-    .heart-container,
-    .download-container {
-        background-color: transparent;
-        border: none;
-    }
-
-    .play-container {
-        color: $play-button-color;
-    }
-
-    .heart-container {
-        color: $left-menu-color-item;
-
-        &:hover {
-            color: white;
+        .play-container,
+        .heart-container,
+        .download-container {
+            background-color: transparent;
+            border: none;
+            font-size: 1.5rem;
         }
-    }
-
-    .download-container {
-        color: $left-menu-color-item;
-
-        &:hover {
-            color: white;
+    
+        .play-container {
+            color: $play-button-color;
+            font-size: 2.8rem;
         }
-    }
+    
+        .heart-container,
+        .download-container {
+            color: $grayed-text;
+    
+            &:hover {
+                color: white;
+            }
+        }
 
+        table {
+            width: 100%;
+        }
+
+        th {
+            color: $grayed-text;
+        }
+
+    }
 }
