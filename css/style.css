@@ -49,10 +49,19 @@
   height: 40px;
 }
 
+.center-container {
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .album {
   border: none;
   background: rgb(0, 0, 0);
   background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+}
+.album .img-shadow {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .album .album-title {
   font-size: 5rem;
@@ -69,7 +78,7 @@
 .album .album-bottom-container {
   margin: -17px;
   background-color: rgba(30, 30, 30, 0.5);
-  height: 65vh;
+  height: 100%;
 }
 .album .album-bottom-container .play-container,
 .album .album-bottom-container .heart-container,
@@ -81,10 +90,15 @@
 .album .album-bottom-container .play-container {
   color: #1ED760;
   font-size: 2.8rem;
+  transition: 0.3s;
+}
+.album .album-bottom-container .play-container:hover {
+  scale: 1.1;
 }
 .album .album-bottom-container .heart-container,
 .album .album-bottom-container .download-container {
   color: #B3B3B3;
+  transition: 0.4s;
 }
 .album .album-bottom-container .heart-container:hover,
 .album .album-bottom-container .download-container:hover {
@@ -102,6 +116,13 @@
 .album .album-bottom-container table thead th {
   color: #B3B3B3;
 }
+.album .album-bottom-container table tbody p {
+  margin: 0;
+}
+.album .album-bottom-container table tbody tr:hover {
+  background-color: #282828;
+  border-radius: 5px;
+}
 .album .album-bottom-container table .song-n {
   flex-basis: 5%;
 }
@@ -116,9 +137,6 @@
 }
 .album .album-bottom-container table .song-td-artists {
   color: #B3B3B3;
-}
-.album .album-bottom-container table tbody p {
-  margin: 0;
 }
 
 /*!
@@ -11985,6 +12003,23 @@ textarea.form-control-lg {
 @import 'right';
 @import 'upper-bar';
 */
+/* SCROLLBAR STYLE */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.568627451);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 body {
   margin: 0;
 }
@@ -12177,6 +12212,7 @@ a:hover {
   height: 70px;
   background-color: #181818;
   border-top: 1px solid rgba(179, 179, 179, 0.2);
+  z-index: 1;
 }
 .homepage-container .bottom-bar .bottom-img-container {
   margin: 0 15px;
@@ -12245,10 +12281,18 @@ a:hover {
 .homepage-container .bottom-bar .icon-bottom-right {
   color: #B3B3B3;
 }
+.homepage-container .center-container {
+  height: calc(100vh - 70px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
 .homepage-container .album {
   border: none;
   background: rgb(0, 0, 0);
   background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+}
+.homepage-container .album .img-shadow {
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 .homepage-container .album .album-title {
   font-size: 5rem;
@@ -12265,7 +12309,7 @@ a:hover {
 .homepage-container .album .album-bottom-container {
   margin: -17px;
   background-color: rgba(30, 30, 30, 0.5);
-  height: 65vh;
+  height: 100%;
 }
 .homepage-container .album .album-bottom-container .play-container,
 .homepage-container .album .album-bottom-container .heart-container,
@@ -12277,10 +12321,15 @@ a:hover {
 .homepage-container .album .album-bottom-container .play-container {
   color: #1ED760;
   font-size: 2.8rem;
+  transition: 0.3s;
+}
+.homepage-container .album .album-bottom-container .play-container:hover {
+  scale: 1.1;
 }
 .homepage-container .album .album-bottom-container .heart-container,
 .homepage-container .album .album-bottom-container .download-container {
   color: #B3B3B3;
+  transition: 0.4s;
 }
 .homepage-container .album .album-bottom-container .heart-container:hover,
 .homepage-container .album .album-bottom-container .download-container:hover {
@@ -12298,6 +12347,13 @@ a:hover {
 .homepage-container .album .album-bottom-container table thead th {
   color: #B3B3B3;
 }
+.homepage-container .album .album-bottom-container table tbody p {
+  margin: 0;
+}
+.homepage-container .album .album-bottom-container table tbody tr:hover {
+  background-color: #282828;
+  border-radius: 5px;
+}
 .homepage-container .album .album-bottom-container table .song-n {
   flex-basis: 5%;
 }
@@ -12312,9 +12368,6 @@ a:hover {
 }
 .homepage-container .album .album-bottom-container table .song-td-artists {
   color: #B3B3B3;
-}
-.homepage-container .album .album-bottom-container table tbody p {
-  margin: 0;
 }
 
 .homepage-artist-content {
