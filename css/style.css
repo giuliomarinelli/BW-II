@@ -1,102 +1,4 @@
 @charset "UTF-8";
-.homepage-artist-content {
-  height: 400px;
-  background-image: url(../assets/imgs/main/yellowcard.jpeg);
-  background-size: cover;
-  margin: -30px -15px;
-}
-.homepage-artist-content .artist-name {
-  font-size: 4rem;
-}
-.homepage-artist-content .spectators-text {
-  font-size: 0.8rem;
-}
-.homepage-artist-content .verified-artist-text {
-  font-size: 0.6rem;
-}
-.homepage-artist-content .verified-icon {
-  font-size: 1rem;
-}
-
-.play-icon {
-  font-size: 3rem;
-  background-color: transparent;
-  border: none;
-  color: #1CD760;
-  margin-top: 35px;
-  transition: 0.2s linear;
-}
-.play-icon:hover {
-  color: white;
-}
-
-.following-btn {
-  font-size: 0.8rem;
-  height: 35px;
-  width: 110px;
-  margin-top: 55px;
-  margin-left: 20px;
-  transition: 0.2s linear;
-}
-
-.three-dots {
-  margin-top: 55px;
-  margin-left: 20px;
-  font-size: 1.5rem;
-}
-
-.img-popular-song {
-  height: 40px;
-}
-
-.album {
-  border: none;
-  background: rgb(0, 0, 0);
-  background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
-}
-.album .album-title {
-  font-size: 5rem;
-}
-.album .artist-image {
-  height: 25px;
-  width: 25px;
-  border-radius: 100%;
-}
-.album .artist-link:hover {
-  text-decoration: underline;
-  text-underline-offset: 1px;
-}
-.album .album-bottom-container {
-  margin: -17px;
-  background-color: rgba(30, 30, 30, 0.5);
-  height: 1200px;
-}
-.album .album-bottom-container .play-container,
-.album .album-bottom-container .heart-container,
-.album .album-bottom-container .download-container {
-  background-color: transparent;
-  border: none;
-  font-size: 1.5rem;
-}
-.album .album-bottom-container .play-container {
-  color: #1ED760;
-  font-size: 2.8rem;
-}
-.album .album-bottom-container .heart-container,
-.album .album-bottom-container .download-container {
-  color: #B3B3B3;
-}
-.album .album-bottom-container .heart-container:hover,
-.album .album-bottom-container .download-container:hover {
-  color: white;
-}
-.album .album-bottom-container table {
-  width: 100%;
-}
-.album .album-bottom-container th {
-  color: #B3B3B3;
-}
-
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -11984,7 +11886,7 @@ a:hover {
   /* ALBUM PAGE */
 }
 .homepage-container .homepage-content {
-  height: calc(100vh - 100px);
+  height: calc(100vh - 70px);
   overflow-y: auto;
 }
 .homepage-container .wrapper {
@@ -12317,7 +12219,6 @@ a:hover {
 
 .img-popular-song {
   height: 40px;
-<<<<<<< HEAD
 }
 
 .song-title {
@@ -12375,7 +12276,9 @@ a:hover {
 .center-container {
   height: calc(100vh - 70px);
   overflow-y: auto;
-}/*# sourceMappingURL=style.css.map */
-=======
-}/*# sourceMappingURL=style.css.map */
->>>>>>> origin/davide
+}
+
+.recently-played-img-container {
+  width: 20px;
+  height: 20px;
+}
