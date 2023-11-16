@@ -12155,8 +12155,32 @@ a:hover {
 }
 
 .play-icon {
+  font-size: 3rem;
   background-color: transparent;
   border: none;
   color: #1CD760;
   margin-top: 35px;
+  transition: 0.2s linear;
+}
+.play-icon:hover {
+  color: white;
+}
+
+.following-btn {
+  font-size: 0.8rem;
+  height: 35px;
+  width: 110px;
+  margin-top: 55px;
+  margin-left: 20px;
+  transition: 0.2s linear;
+}
+
+.three-dots {
+  margin-top: 55px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.img-popular-song {
+  height: 40px;
 }/*# sourceMappingURL=style.css.map */
