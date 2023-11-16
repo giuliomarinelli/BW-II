@@ -411,7 +411,7 @@ a {
 
         }
     }
-
+    
     /* ALBUM PAGE */
     
     @import 'album-main';
@@ -419,3 +419,7 @@ a {
 }
 
 @import 'artist-main';
+.recently-played-img-container {
+    width: 20px;
+    height: 20px;
+}
