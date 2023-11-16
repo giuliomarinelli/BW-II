@@ -1,5 +1,19 @@
+$play-button-color: #1ED760;
 
-    .album {
-        background: rgb(0,0,0);
-        background: linear-gradient(360deg, #121212 43%, rgba(255,211,64,1) 100%);
+.album {
+    background: rgb(0,0,0);
+    background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+
+    .play-container,
+    .heart-container,
+    .download-container {
+        background-color: transparent;
+        border: none;
     }
+
+    .play-container {
+        color: $play-button-color;
+
+    }
+
+}

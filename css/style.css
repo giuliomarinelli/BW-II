@@ -1,9 +1,4 @@
 @charset "UTF-8";
-.album {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(360deg, #121212 43%, rgb(255, 211, 64) 100%);
-}
-
 /*!
  * Bootstrap  v5.3.2 (https://getbootstrap.com/)
  * Copyright 2011-2023 The Bootstrap Authors
@@ -12130,5 +12125,14 @@ a:hover {
 }
 .homepage-container .album {
   background: rgb(0, 0, 0);
-  background: linear-gradient(360deg, #121212 43%, rgb(255, 211, 64) 100%);
+  background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+}
+.homepage-container .album .play-container,
+.homepage-container .album .heart-container,
+.homepage-container .album .download-container {
+  background-color: transparent;
+  border: none;
+}
+.homepage-container .album .play-container {
+  color: #1ED760;
 }/*# sourceMappingURL=style.css.map */
