@@ -8,7 +8,7 @@ function queryString(params) {
 
 // URL di redirect e credenziali dell'app Spotify
 var redirect_uri = 'http://127.0.0.1:5500/app.html';
-var client_id = 'a08665dce25b4dd4b88d1d5a503b023e';
+var client_id = '0fd646b9d9594b9b8c7d43a66c6e3380';
 var client_secret = defaultExport;
 
 // Gestione del callback nel browser
