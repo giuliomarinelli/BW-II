@@ -12127,6 +12127,18 @@ a:hover {
   background: rgb(0, 0, 0);
   background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
 }
+.homepage-container .album .album-title {
+  font-size: 5rem;
+}
+.homepage-container .album .artist-image {
+  height: 25px;
+  width: 25px;
+  border-radius: 100%;
+}
+.homepage-container .album .artist-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
 .homepage-container .album .play-container,
 .homepage-container .album .heart-container,
 .homepage-container .album .download-container {
@@ -12135,4 +12147,16 @@ a:hover {
 }
 .homepage-container .album .play-container {
   color: #1ED760;
+}
+.homepage-container .album .heart-container {
+  color: #B3B3B3;
+}
+.homepage-container .album .heart-container:hover {
+  color: white;
+}
+.homepage-container .album .download-container {
+  color: #B3B3B3;
+}
+.homepage-container .album .download-container:hover {
+  color: white;
 }/*# sourceMappingURL=style.css.map */
