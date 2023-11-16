@@ -11855,10 +11855,24 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.suggested-album-green {
+  height: 400px;
+  background-color: #B1993F;
+}
+
+.image-suggested-album-green-container {
+  width: 200px;
+}
+
+.upper-bar-green {
+  background-color: #B1993F;
+}
+
 /*
 @import 'artist-main';
 @import 'bottom-bar';
 @import 'homepage-main';
+@import 'bottom-bar';
 @import 'left';
 @import 'right';
 @import 'upper-bar';
@@ -12159,4 +12173,54 @@ a:hover {
 }
 .homepage-container .album .download-container:hover {
   color: white;
-}/*# sourceMappingURL=style.css.map */
+}
+.homepage-artist-content {
+  height: 400px;
+  background-image: url(../assets/imgs/main/yellowcard.jpeg);
+  background-size: cover;
+  margin: -30px -15px;
+}
+.homepage-artist-content .artist-name {
+  font-size: 4rem;
+}
+.homepage-artist-content .spectators-text {
+  font-size: 0.8rem;
+}
+.homepage-artist-content .verified-artist-text {
+  font-size: 0.6rem;
+}
+.homepage-artist-content .verified-icon {
+  font-size: 1rem;
+}
+
+.play-icon {
+  font-size: 3rem;
+  background-color: transparent;
+  border: none;
+  color: #1CD760;
+  margin-top: 35px;
+  transition: 0.2s linear;
+}
+.play-icon:hover {
+  color: white;
+}
+
+.following-btn {
+  font-size: 0.8rem;
+  height: 35px;
+  width: 110px;
+  margin-top: 55px;
+  margin-left: 20px;
+  transition: 0.2s linear;
+}
+
+.three-dots {
+  margin-top: 55px;
+  margin-left: 20px;
+  font-size: 1.5rem;
+}
+
+.img-popular-song {
+  height: 40px;
+}
+/*# sourceMappingURL=style.css.map */

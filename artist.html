@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon"
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1982px-Spotify_icon.svg.png">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <title>Spotify - Homepage</title>
+    <title>Spotify - Astist Page</title>
 </head>
 
 <body>
@@ -116,13 +116,53 @@
                     </div>
 
                 </div>
-                <div class="homepage-content">
+                <div class="homepage-artist-content d-flex align-items-end">
 
-                    <div class="suggested-album"></div>
-                    <div class="last-playlists"></div>
-                    <div class="suggested-playlists"></div>
+                    <div class="suggested-album-page">
 
+                        <div class="top-text-artist-page my-5 ms-2">
+                            
+                            <p class="m-0 text-white verified-artist-text ms-2"><span class="me-1"><i class="bi bi-patch-check-fill text-primary verified-icon"></i></span>Artista verificato</p>
+                            <h2 class="text-white fw-bold artist-name m-0 mb-2">Yellowcard</h2>
+                            <p class="m-0 text-white spectators-text ms-2">3.433.158 ascoltatori mensili</p>
+
+                        </div>
+                
+                    </div>
                 </div>
+                    <!-- BOTTONI -->
+                    
+                    <div class="command-container-artist d-flex">
+
+                        <button class="play-icon"><i class="bi bi-play-circle-fill"></i></button>
+                        <button class="btn btn-outline-light following-btn fw-bold">FOLLOWING</button>
+                        <a class="three-dots" href="#"><i class="bi bi-three-dots icon"></i></a>
+
+                    </div>
+                    <div class="popular-songs d-flex">
+
+                            <div class="row p-0 mt-3 flex-nowrap" id="artists-tracks">
+                                <div class=" d-flex align-items-center mb-3">
+                                        <div class="d-flex align-items-center justify-content-between">
+                                            <span class="text-white-50">1</span>
+                                            <img class="img-fluid ms-3 img-popular-song" src="assets/imgs/search/image-10.jpg" alt="img" />
+                                            <h4 class="mb-0 ms-3 fs-6 text-white">Ocean Avenue</h4>
+                                            <div class="d-none d-lg-flex">
+                                                <span class="me-2 text-white-50">276.616.912</span>
+                                            </div>
+                                            <div>
+                                                <i class="bi bi-three-dots-vertical d-lg-none text-white-50"></i>
+                                                <span class="text-white-50 d-none d-lg-flex">3:18</span>
+                                            </div>
+                                        </div>
+                                </div>
+                            <aside class="col-5 text-white">Pizzette</aside>           
+                            </div>   
+
+
+                    </div>
+
+
 
             </div>
 

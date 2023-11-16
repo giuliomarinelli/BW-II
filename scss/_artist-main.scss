@@ -1,0 +1,70 @@
+.homepage-artist-content {
+
+    height: 400px;
+    background-image: url(../assets/imgs/main/yellowcard.jpeg);
+    background-size: cover;
+    margin: -30px -15px;
+
+    .artist-name{
+
+        font-size: 4rem;
+
+    }
+
+    .spectators-text{
+
+        font-size: 0.8rem;
+
+    }
+
+    .verified-artist-text{
+
+        font-size: 0.6rem;
+
+    }
+
+    .verified-icon{
+
+        font-size: 1rem;
+
+    }
+
+}
+.play-icon{
+
+    font-size: 3rem;
+    background-color: transparent;
+    border: none;
+    color: #1CD760;
+    margin-top: 35px;
+    transition: .2s linear;
+
+    &:hover{
+
+        color: white;
+    }
+}
+
+.following-btn{
+
+    font-size: 0.8rem;
+    height: 35px;
+    width: 110px;
+    margin-top: 55px;
+    margin-left: 20px;
+    transition: .2s linear;
+}
+
+.three-dots{
+
+    margin-top: 55px;
+    margin-left: 20px;
+    font-size: 1.5rem;
+
+}
+
+.img-popular-song{
+
+    height: 40px;
+
+}

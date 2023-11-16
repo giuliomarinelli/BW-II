@@ -1,11 +1,13 @@
 @import 'functions';
 @import 'variables';
+@import 'artist-main';
+@import 'album-main';
 @import '../node_modules/bootstrap/scss/bootstrap';
 
 /*
-@import 'artist-main';
 @import 'bottom-bar';
 @import 'homepage-main';
+@import 'bottom-bar';
 @import 'left';
 @import 'right';
 @import 'upper-bar';
@@ -416,3 +418,4 @@ a {
     
 }
 
+@import 'artist-main';
