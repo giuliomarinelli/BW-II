@@ -12183,4 +12183,61 @@ a:hover {
 
 .img-popular-song {
   height: 40px;
+}
+
+.song-title {
+  width: 300px;
+}
+
+.song-streams {
+  width: 250px;
+  font-size: 0.9rem;
+}
+
+.song-duration {
+  font-size: 0.9rem;
+}
+
+.see-more {
+  color: #B8B8B8;
+}
+.see-more:hover {
+  color: white;
+}
+
+.img-liked-song {
+  position: relative;
+}
+.img-liked-song .songs-you-like-img {
+  height: 60px;
+  border-radius: 100%;
+  position: absolute;
+}
+.img-liked-song .heart-icon {
+  position: relative;
+  left: 35px;
+  top: 40px;
+  font-size: 0.8rem;
+  color: white;
+  background-color: green;
+  border-radius: 100%;
+  padding: 5px 5px 3px 5px;
+}
+
+.like-number {
+  font-size: 0.8rem;
+}
+
+.artist-liked {
+  font-size: 0.7rem;
+}
+
+.text-liked-songs {
+  padding-left: 50px;
+  padding-top: 10px;
+}
+
+.center-container {
+  height: calc(100vh - 70px);
+  overflow-y: auto;
 }/*# sourceMappingURL=style.css.map */
