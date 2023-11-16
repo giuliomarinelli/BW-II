@@ -69,7 +69,7 @@
 .album .album-bottom-container {
   margin: -17px;
   background-color: rgba(30, 30, 30, 0.5);
-  height: 1200px;
+  height: 65vh;
 }
 .album .album-bottom-container .play-container,
 .album .album-bottom-container .heart-container,
@@ -91,10 +91,34 @@
   color: white;
 }
 .album .album-bottom-container table {
-  width: 100%;
+  width: 98%;
 }
-.album .album-bottom-container th {
+.album .album-bottom-container table thead {
+  border-bottom: 1px solid rgba(179, 179, 179, 0.15);
+}
+.album .album-bottom-container table thead tr {
+  padding-bottom: 10px;
+}
+.album .album-bottom-container table thead th {
   color: #B3B3B3;
+}
+.album .album-bottom-container table .song-n {
+  flex-basis: 5%;
+}
+.album .album-bottom-container table .song-title {
+  flex-basis: 55%;
+}
+.album .album-bottom-container table .song-plays {
+  flex-basis: 35%;
+}
+.album .album-bottom-container table .song-time {
+  flex-basis: 5%;
+}
+.album .album-bottom-container table .song-td-artists {
+  color: #B3B3B3;
+}
+.album .album-bottom-container table tbody p {
+  margin: 0;
 }
 
 /*!
@@ -12241,7 +12265,7 @@ a:hover {
 .homepage-container .album .album-bottom-container {
   margin: -17px;
   background-color: rgba(30, 30, 30, 0.5);
-  height: 1200px;
+  height: 65vh;
 }
 .homepage-container .album .album-bottom-container .play-container,
 .homepage-container .album .album-bottom-container .heart-container,
@@ -12263,10 +12287,34 @@ a:hover {
   color: white;
 }
 .homepage-container .album .album-bottom-container table {
-  width: 100%;
+  width: 98%;
 }
-.homepage-container .album .album-bottom-container th {
+.homepage-container .album .album-bottom-container table thead {
+  border-bottom: 1px solid rgba(179, 179, 179, 0.15);
+}
+.homepage-container .album .album-bottom-container table thead tr {
+  padding-bottom: 10px;
+}
+.homepage-container .album .album-bottom-container table thead th {
   color: #B3B3B3;
+}
+.homepage-container .album .album-bottom-container table .song-n {
+  flex-basis: 5%;
+}
+.homepage-container .album .album-bottom-container table .song-title {
+  flex-basis: 55%;
+}
+.homepage-container .album .album-bottom-container table .song-plays {
+  flex-basis: 35%;
+}
+.homepage-container .album .album-bottom-container table .song-time {
+  flex-basis: 5%;
+}
+.homepage-container .album .album-bottom-container table .song-td-artists {
+  color: #B3B3B3;
+}
+.homepage-container .album .album-bottom-container table tbody p {
+  margin: 0;
 }
 
 .homepage-artist-content {

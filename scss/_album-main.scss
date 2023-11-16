@@ -23,7 +23,7 @@ $grayed-text: #B3B3B3;
     .album-bottom-container {
         margin: -17px;
         background-color: rgba(#1e1e1e, 0.5);
-        height: 1200px;
+        height: 65vh;
 
         .play-container,
         .heart-container,
@@ -48,12 +48,47 @@ $grayed-text: #B3B3B3;
         }
 
         table {
-            width: 100%;
-        }
+            width: 98%;
 
-        th {
-            color: $grayed-text;
-        }
+            thead {
+                border-bottom: 1px solid rgba($grayed-text, 0.15);
+    
+                tr {
+                    padding-bottom: 10px;
+                }
 
+                th {
+                    color: $grayed-text;
+                }
+            }
+
+
+            .song-n {
+                flex-basis: 5%;
+            }
+            
+            .song-title {
+                flex-basis: 55%;
+            }
+
+            .song-plays {
+                flex-basis: 35%;
+            }
+
+            .song-time {
+                flex-basis: 5%;
+            }
+
+            .song-td-artists {
+                color: $grayed-text;
+            }
+
+            tbody {
+                p {
+                    margin:0;
+                }
+            }
+
+        }
     }
 }
