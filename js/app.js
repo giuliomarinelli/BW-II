@@ -64,7 +64,77 @@ async function handleCallback() {
         document.getElementById('append-wrapper').append(clone)
         const api = async () => {
 
-
+            window.onSpotifyWebPlaybackSDKReady = () => {
+                const token = 'BQBCtzY-PDn2Z6yAR3hZ7iamyGqv8lIumryVaO1lh4bJ-89Mi1AakSk-4vfqr8Vk70oDRJM94wV6gYx9tL9FiJt1ybpMiDsSUoXM4dCXcCYpWLnU2sXoHyYr3uWuQ5lvsUy0NKiYx2V9eJaqpdM9W3557-rjnlZA8OMJDl7p7uOtWmOb9TeAsYpy0XGhzpeB6cXZKprBdRDkUqxloQ'
+                const player = new Spotify.Player({
+                    name: 'Spotify Clone',  
+                    getOAuthToken: cb => { cb(token); },
+                    volume: 0.5
+                });
+                player.connect();
+                // Ready
+                player.addListener('ready', ({ device_id }) => {
+                    console.log('Ready with Device ID', device_id);
+                });
+    
+                // Not Ready
+                player.addListener('not_ready', ({ device_id }) => {
+                    console.log('Device ID has gone offline', device_id);
+                });
+                player.addListener('initialization_error', ({ message }) => {
+                    console.error(message);
+                });
+    
+                player.addListener('authentication_error', ({ message }) => {
+                    console.error(message);
+                });
+    
+                player.addListener('account_error', ({ message }) => {
+                    console.error(message);
+                });
+                
+                console.log(document.getElementById('playToggle'))
+                document.getElementById('playToggle').onclick = function () {
+                    console.log('click')
+                    player.togglePlay();
+                };
+    
+                player.getCurrentState().then(state => {
+                    console.log(state)
+                    if (!state) {
+                        console.error('User is not playing music through the Web Playback SDK');
+                        return;
+                    }
+    
+                    var current_track = state.track_window.current_track;
+                    var next_track = state.track_window.next_tracks[0];
+    
+                    console.log('Currently Playing', current_track);
+                    console.log('Playing Next', next_track);
+                });
+    
+                fetch('https://api.spotify.com/v1/me/player/play', {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer ' + readCookie('SpotifyBearer'),
+                    },
+                    body: JSON.stringify({
+                        uris: ["spotify:track:1pfOZQDapYAnR5qbHZhsXm"],
+                        device_id: device_id
+                    })
+                })
+                    .then(response => {
+                        console.log('ciao')
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok: ' + response.statusText);
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+                    
+            }
             const options = {
                 headers: {
                     'Authorization': `Bearer ${readCookie('SpotifyBearer')}`
@@ -137,9 +207,16 @@ async function handleCallback() {
                 document.getElementById('album-img').src = data6.images[1].url; 
 
             }))
+            document.getElementById('home').addEventListener('click', (e) => {
+                e.preventDefault()
+                const clone = getTemplate(0);
+                document.getElementById('content').remove()
+                document.getElementById('append-wrapper').append(clone)
+                api()
+            })
         }
         api();
-        /*
+        
         window.onSpotifyWebPlaybackSDKReady = () => {
             const token = 'BQBCtzY-PDn2Z6yAR3hZ7iamyGqv8lIumryVaO1lh4bJ-89Mi1AakSk-4vfqr8Vk70oDRJM94wV6gYx9tL9FiJt1ybpMiDsSUoXM4dCXcCYpWLnU2sXoHyYr3uWuQ5lvsUy0NKiYx2V9eJaqpdM9W3557-rjnlZA8OMJDl7p7uOtWmOb9TeAsYpy0XGhzpeB6cXZKprBdRDkUqxloQ'
             const player = new Spotify.Player({
@@ -212,7 +289,7 @@ async function handleCallback() {
                 
         }
 
-        */
+        
 
 
 
