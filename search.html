@@ -8,7 +8,7 @@
     <link rel="icon" type="image/x-icon"
         href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Spotify_icon.svg/1982px-Spotify_icon.svg.png">
     <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.min.css">
-    <title>Spotify - Artist Page</title>
+    <title>Spotify - Search Page</title>
 </head>
 
 <body>
@@ -51,8 +51,8 @@
                     <div class="d-flex align-items-center gap-3 menu-item mb-2">
 
                         <div class="d-flex justify-content-center align-items-center icon-width">
-                            <a href="#"><i class="bi bi-heart-fill"></i>
-                        </div><span class="left-menu-text">Crea playlist</span></a>
+                            <a href="#"><i class="bi bi-heart-fill songs-you-like-img"></i>
+                        </div><span class="left-menu-text">Brani che ti piacciono</span></a>
 
                     </div>
                     <div class="d-flex align-items-center gap-3 menu-item mb-4">
@@ -62,10 +62,6 @@
                         </div><span class="left-menu-text">I tuoi episodi</span></a>
 
                     </div>
-
-
-
-
                 </div>
                 <div class="playlist-container">
 
@@ -82,17 +78,97 @@
                         <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
                         <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
 
-
                     </div>
 
                 </div>
 
             </div>
-            <div class="center px-3 py-2">
+            <div class="center center-container search-page px-3 py-2">
 
-                <div class="upper-bar d-flex justify-content-between">
+                <div class="upper-bar d-flex justify-content-between mt-2">
 
-                    <div class="arrows d-flex gap-2">
+                    <button class="btn btn-primary bg-dark border border-white h-button" type="button" data-bs-toggle="offcanvas" data-bs-target=".offcanvas" aria-controls="offcanvasWithBothOptions"><i class="bi bi-list"></i></button>
+
+                    <div class="offcanvas offcanvas-start bg-black" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                        <div class="offcanvas-header">
+                          <h5 class="offcanvas-title text-white ps-3" id="offcanvasWithBothOptionsLabel">Spotify Menu</h5>
+                          <button type="button" class="btn-close bg-light" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                        </div>
+                        <div class="offcanvas-body text-white">
+                          
+                            <div id="left-nav" class="left">
+
+                                <div class="menu-container">
+                
+                                    <div class="menu-item mb-2"><a href="#"><i class="bi bi-three-dots icon"></i></a></div>
+                                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
+                
+                                        <div class="d-flex justify-content-center align-items-center icon-width">
+                                            <a href="#"><i class="bi bi-house-door-fill icon"></i>
+                                        </div><span class="left-menu-text">Home</span></a>
+                
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
+                
+                                        <div class="d-flex justify-content-center align-items-center icon-width">
+                                            <a href="#"><i class="bi bi-search"></i>
+                                        </div><span class="left-menu-text">Cerca</span></a>
+                
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 menu-item mb-4">
+                
+                                        <div class="d-flex justify-content-center align-items-center icon-width">
+                                            <a href="#"><i class="bi bi-collection"></i>
+                                        </div><span class="left-menu-text">La tua libreria</span></a>
+                
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
+                
+                                        <div class="d-flex justify-content-center align-items-center icon-width">
+                                            <a href="#"><i class="bi bi-plus-square-fill"></i>
+                                        </div><span class="left-menu-text">Crea playlist</span></a>
+                
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 menu-item mb-2">
+                
+                                        <div class="d-flex justify-content-center align-items-center icon-width">
+                                            <a href="#"><i class="bi bi-heart-fill songs-you-like-img"></i>
+                                        </div><span class="left-menu-text">Brani che ti piacciono</span></a>
+                
+                                    </div>
+                                    <div class="d-flex align-items-center gap-3 menu-item mb-4">
+                
+                                        <div class="d-flex justify-content-center align-items-center icon-width">
+                                            <a href="#"><i class="bi bi-bookmark-fill"></i></i>
+                                        </div><span class="left-menu-text">I tuoi episodi</span></a>
+                
+                                    </div>
+                                </div>
+                                <div class="playlist-container">
+                
+                                    <div class="playlist-list pt-4">
+                
+                                        <a class="playlist-list-item d-block mb-2" href="#">Be the young</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Saggio vibes</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                                        <a class="playlist-list-item d-block mb-2" href="#">Prova</a>
+                
+                                    </div>
+                
+                                </div>
+                
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="arrows d-flex gap-2 mt-2">
 
                         <button class="arrow-icon d-flex justify-content-center align-items-center"><i
                                 class="bi bi-chevron-left m-fix-left"></i></button>
@@ -101,7 +177,13 @@
 
                     </div>
 
-                    <div class="dropdown">
+                    <div class="searchInputWrapper mt-2">
+                        <input class="searchInput" type="text" placeholder='Artisti, brani o podcast..'>
+                        <i class="searchInputIcon bi bi-search"></i>
+                        </input>
+                    </div>
+
+                    <div class="dropdown mt-2">
                         <button class="dropdown-toggle btn-dropdown d-flex gap-1 align-items-center btn-top"
                             type="button" data-bs-toggle="dropdown" aria-expanded="false">
 
@@ -116,51 +198,47 @@
                     </div>
 
                 </div>
-                <div class="homepage-artist-content d-flex align-items-end">
-
-                    <div class="suggested-album-page">
-
-                        <div class="top-text-artist-page my-5 ms-2">
-                            
-                            <p class="m-0 text-white verified-artist-text ms-2"><span class="me-1"><i class="bi bi-patch-check-fill text-primary verified-icon"></i></span>Artista verificato</p>
-                            <h2 class="text-white fw-bold artist-name m-0 mb-2">Yellowcard</h2>
-                            <p class="m-0 text-white spectators-text ms-2">3.433.158 ascoltatori mensili</p>
-
-                        </div>
                 
+                <div class="album-page-content mt-5">
+
+                    <div class="album-bottom-container mt-1 ps-4 pt-2">
+                        <div class="album-songs-list mt-4">
+                            <table>
+                                <thead>
+                                    <tr class="d-flex mx-4 ps-3">
+                                        <th class="song-n song-n-th">#</th>
+                                        <th class="song-title song-title-th">TITOLO</th>
+                                        <th class="song-plays song-plays-th">RIPRODUZIONI</th>
+                                        <th class="song-time song-time-th text-end pe-4"><i class="bi bi-clock"></i></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="d-flex text-white mx-4 ps-3 py-4 align-items-center">
+                                        <td class="song-n song-n-td">1</td>
+                                        <td class="song-title song-title-td">
+                                            <p class="song-td-name">Enemy (with JID) - from the series Arcane League of Legends</p>
+                                            <p class="song-td-artists">Imagine Dragons, JID, Arcane, League of Legends</p>
+                                        </td>
+                                        <td class="song-plays song-plays-td ps-5">433.309</td>
+                                        <td class="song-time song-time-td">3:37</td>
+                                    </tr>
+                                    <tr class="d-flex text-white mx-4 ps-3 py-4 align-items-center">
+                                        <td class="song-n song-n-td">2</td>
+                                        <td class="song-title song-title-td">
+                                            <p class="song-td-name">Enemy (with JID) - from the series Arcane League of Legends</p>
+                                            <p class="song-td-artists">Imagine Dragons, JID, Arcane, League of Legends</p>
+                                        </td>
+                                        <td class="song-plays song-plays-td ps-5">433.309</td>
+                                        <td class="song-time song-time-td">3:37</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                </div>
-                    <!-- BOTTONI -->
+
                     
-                    <div class="command-container-artist d-flex">
 
-                        <button class="play-icon"><i class="bi bi-play-circle-fill"></i></button>
-                        <button class="btn btn-outline-light following-btn fw-bold">FOLLOWING</button>
-                        <a class="three-dots" href="#"><i class="bi bi-three-dots icon"></i></a>
-
-                    </div>
-                    <div class="popular-songs d-flex">
-
-                            <div class="row p-0 mt-3 flex-nowrap" id="artists-tracks">
-                                <div class=" d-flex align-items-center mb-3">
-                                        <div class="d-flex align-items-center justify-content-between">
-                                            <span class="text-white-50">1</span>
-                                            <img class="img-fluid ms-3 img-popular-song" src="assets/imgs/search/image-10.jpg" alt="img" />
-                                            <h4 class="mb-0 ms-3 fs-6 text-white">Ocean Avenue</h4>
-                                            <div class="d-none d-lg-flex">
-                                                <span class="me-2 text-white-50">276.616.912</span>
-                                            </div>
-                                            <div>
-                                                <i class="bi bi-three-dots-vertical d-lg-none text-white-50"></i>
-                                                <span class="text-white-50 d-none d-lg-flex">3:18</span>
-                                            </div>
-                                        </div>
-                                </div>
-                            <aside class="col-5 text-white">Pizzette</aside>           
-                            </div>
-                    </div>
-
-
+                </div>
 
             </div>
 
@@ -275,6 +353,7 @@
                     </p>
                 </div>
             </div>
+            
             <div class="volume-container d-flex gap-3">
                 <i class="bi bi-mic icon-bottom-right"></i>
                 <i class="bi bi-collection-play icon-bottom-right"></i>
@@ -293,6 +372,7 @@
         </div>
     </div>
 
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
