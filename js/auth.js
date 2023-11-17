@@ -22,7 +22,7 @@ const getAuth = async () => {
 
     const data = await res1.json();
     writeCookie('SpotifyBearer', data.access_token);
-    return data;
+    
 }
 
 setInterval(getAuth, 3600000);
