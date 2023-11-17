@@ -8,9 +8,9 @@
 <body>
   
     <script>
-        const scope = 'user-read-private user-read-email user-read-playback-state user-top-read user-read-recently-played user-follow-read';
+        const scope = 'user-read-private user-read-email user-read-playback-state user-top-read user-read-recently-played user-follow-read streaming user-modify-playback-state user-read-currently-playing';
         const clientId = 'a08665dce25b4dd4b88d1d5a503b023e'
-        location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${clientId}&scope=${scope}&redirect_uri=http://127.0.0.1:5500/app.html`;
+        location.href = `https://accounts.spotify.com/authorize?response_type=code&client_id=${clientId}&scope=${scope}&redirect_uri=http://127.0.0.1:5500/auth.html`;
     </script>
 </body>
 </html>
