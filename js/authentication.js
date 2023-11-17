@@ -44,7 +44,7 @@ async function handleCallback() {
         writeCookie('SpotifyBearer', data.access_token);
         console.log(data)
         console.log('ciao')
-        window.location.href = `./app.html?code=${code}`;
+        window.location.href = `./app.html`;
     
 }
 

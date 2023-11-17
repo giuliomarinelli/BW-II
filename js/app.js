@@ -1,6 +1,29 @@
 // Funzione di utilità per la creazione di stringhe di query URL
 
+function playSong(...trackUri) {
+    fetch('https://api.spotify.com/v1/me/player/play', {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer ' + readCookie('SpotifyBearer'),
+        },
+        body: JSON.stringify({
+            uris: trackUri,
+            device_id: localStorage.getItem('device_id'),
+            play: true
+        })
+    })
+        .then(response => {
 
+            if (!response.ok) {
+                throw new Error('Network response was not ok: ' + response.statusText);
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
+}
 
 document.addEventListener('DOMContentLoaded', () => {
     function getTemplate(i) {
@@ -29,10 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(data2)
         data2.items.forEach(el => {
             const a = document.createElement('a');
-            a.classList.add('playlist-list-item', 'd-block', 'mb-2', 'album-link', 'album-link')
+            a.classList.add('playlist-list-item', 'd-block', 'mb-2', 'album-link', 'play')
             a.innerText = el.name;
             a.href = '#'
             a.setAttribute('data-id', el.album.id)
+            a.setAttribute('data-uri', el.album.uri)
             document.querySelector('.playlist-list').append(a);
         })
         const res3 = await fetch('https://api.spotify.com/v1/me/top/tracks?limit=6', options);
@@ -42,8 +66,10 @@ document.addEventListener('DOMContentLoaded', () => {
             const a = document.createElement('a');
             a.innerText = data3.items[ind].name;
             a.href = '#'
-            a.classList.add('album-link')
+            a.classList.add('play')
             a.setAttribute('data-id', data3.items[ind].id)
+            a.setAttribute('data-uri', data3.items[ind].uri)
+
             el.querySelector('p').innerText = '';
             el.querySelector('p').append(a);
             el.querySelector('img').src = data3.items[ind].album.images[1].url;
@@ -56,9 +82,10 @@ document.addEventListener('DOMContentLoaded', () => {
             el.querySelector('.card-img-top').src = data4.artists.items[ind].images[1].url;
             const a = document.createElement('a');
             a.href = '#'
-            a.classList.add('artist-link')
+            a.classList.add('artist-link', 'play')
             a.innerText = data4.artists.items[ind].name;
             a.setAttribute('data-id', data4.artists.items[ind].id)
+            a.setAttribute('data-uri', data4.artists.items[ind].uri)
             el.querySelector('h5').innerText = ''
             el.querySelector('h5').append(a);
             el.querySelector('p').innerText = ''
@@ -66,25 +93,58 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.querySelectorAll('.album-link').forEach(el => el.addEventListener('click', async (e) => {
             e.preventDefault()
-            document.getElementById('username').innerText = data1.display_name;
             const clone = getTemplate(1);
             document.getElementById('content').remove()
             document.getElementById('append-wrapper').append(clone)
+            document.getElementById('username').innerText = data1.display_name;
             console.log(`https://api.spotify.com/v1/albums/${el.getAttribute('data-id')}`)
             const res6 = await fetch(`https://api.spotify.com/v1/albums/${el.getAttribute('data-id')}`, options)
+
             const data6 = await res6.json()
             console.log(data6)
-            let artists = '';
-            data6.artists.forEach(el => artists += el.name + ' ')
-            document.getElementById('artist-link').innerText = artists;
+            
             document.getElementById('total-tracks').innerText = data6.total_tracks;
             document.getElementById('album-name').innerText = data6.name;
             document.getElementById('album-img').src = data6.images[1].url;
+            data6.tracks.items.forEach((el, ind) => {
+                const clone = getTemplate(3);
+                let artists = ''
+                el.artists.forEach(el => artists +=  '<a href="#" data-id="' + el.id + '" class="artist">' + el.name + '</a>&nbsp;')
+                document.getElementById('artist-link').innerHTML = artists;
+                clone.querySelector('.song-td-name').innerHTML = `<a href="#" data-uri="${el.uri}" class="play">${el.name}</a>`;
+                clone.querySelector('.song-td-artists').innerHTML = artists
+                clone.querySelector('#number').innerText = ind + 1;
+                document.getElementById('album-tracks').append(clone);
 
+
+            })
+
+            document.querySelectorAll('.artist').forEach(el => el.addEventListener('click', async (e) => {
+                e.preventDefault();
+                const clone = getTemplate(2);
+                document.getElementById('content').remove()
+                clone.querySelector('#username').innerText = data1.display_name;
+                const res_artist = await fetch(`https://api.spotify.com/v1/artists/${el.getAttribute('data-id')}`, options)
+                const data_artist = await res_artist.json();
+                console.log(data_artist)
+                clone.querySelector('#artist-name').innerText = data_artist.name;
+                document.getElementById('append-wrapper').append(clone)
+
+            }))
+            document.querySelectorAll('.play').forEach(el => el.addEventListener('click', (e) => {
+                e.preventDefault()
+                playSong(el.getAttribute('data-uri'));
+            }))
+            
         }))
     }
     api();
-
+    document.getElementById('home').addEventListener('click', () => {
+        const clone = getTemplate(0)
+        document.getElementById('content').remove()
+        document.getElementById('append-wrapper').append(clone)
+        api()
+    })
     async function getDevices() {
         const res5 = await fetch('https://api.spotify.com/v1/me/player/devices', {
             headers: {
@@ -96,10 +156,9 @@ document.addEventListener('DOMContentLoaded', () => {
         return devices
     }
 
-
+    document.getElementById('playToggle').addEventListener('click', (e) => e.target.classList.toggle('active'))
     window.onSpotifyWebPlaybackSDKReady = () => {
-        const token = 'BQDciwC46gOrfB55k97RAUB4tlYCCMLL8deviLbWfDGXT-P48hQPzmVe_VAGA5J9inMrMKM9rtiR_e0MhYFIAiupM9U8TRnw3PEUwvK0awP-6pIIzHcZ4mEnQjMHpBM8vPSalgmCzoz0c7IBb7DYu3zTbSscoXttof05aMHfzKWuOOebrz3992aZg9wt63kbd81oWb05iFTuIBwjq4TZeraIqysMRSdc';
-
+        const token = readCookie('SpotifyBearer')
         const deviceName = 'Spotify Clone';
 
 
@@ -164,30 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                     setActivePlayer(found.id).then(res => {
                         //loader scompare
-                        setTimeout(() => {
-                            fetch('https://api.spotify.com/v1/me/player/play', {
-                                method: 'PUT',
-                                headers: {
-                                    'Content-Type': 'application/json',
-                                    'Authorization': 'Bearer ' + readCookie('SpotifyBearer'),
-                                },
-                                body: JSON.stringify({
-                                    uris: ["spotify:track:1pfOZQDapYAnR5qbHZhsXm"],
-                                    device_id: found.id,
-                                    play: true
-                                })
-                            })
-                                .then(response => {
-                                    console.log('ciao')
-                                    if (!response.ok) {
-                                        throw new Error('Network response was not ok: ' + response.statusText);
-                                    }
-                                })
-                                .catch(error => {
-                                    console.error('Error:', error);
-                                });
 
-                        }, 10000)
                     })
 
 
@@ -196,6 +232,8 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
         })
+
+
 
         console.log(document.getElementById('playToggle'))
         document.getElementById('playToggle').onclick = function () {

@@ -8,10 +8,14 @@ $shadow:rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     overflow-x: hidden;
 }
 
-.album {
+.search-page {
     border: none;
     background: rgb(0,0,0);
     background: linear-gradient(360deg, #121212 43%, #E3C450 100%);
+
+    .h-button {
+        display: none;
+    }
 
     .album-profile-container {
 
@@ -132,7 +136,7 @@ $shadow:rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     
 }
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 974px) {
 
         .song-n,
         .song-plays {
@@ -158,7 +162,53 @@ $shadow:rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
             font-size: 4rem !important;
         }
 
-        .dropdown-left {
+        .h-button {
             display: block !important;
         }
+
+        #left-nav {
+            display:block !important;
+        }
 }
+
+
+
+.searchInputWrapper {
+    position: relative;
+  }
+  
+  .searchInput {
+    width: 20rem;
+    height: 1.5rem;
+    padding: 0 1rem; 
+    border-radius: 2rem;
+    border: none;
+    transition: transform 0.1s ease-in-out;
+  }
+  
+  ::placeholder {
+    color: #a1a1a1;
+  }
+  
+  :focus::placeholder {
+    text-indent: -999px
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    transform: scale(1.1);
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .searchInputIcon {
+    position: absolute;
+    right: 0.8rem;
+    top: 0;
+    color: #a1a1a1;
+    transition: all 0.1s ease-in-out;
+  }
+  
+  .container:focus-within > 
+  .searchInputWrapper > .searchInputIcon {
+    right: 0.2rem;
+  }
